@@ -38,15 +38,24 @@ GA4 introduced a hard dependency on `utm_id` for non-Google cost data import. Wi
 - [[owox]] — automates cost data import requiring `utm_id`
 - Most ad platforms (Meta, Bing, TikTok) support UTM parameters in final URL fields
 
+## Facebook-Specific UTM Best Practices
+
+From Ruler Analytics:
+- **Lowercase everything** — UTM parameters are case-sensitive; `Facebook` ≠ `facebook` in GA4 reports
+- **Medium: use `paid` not `cpc` for Facebook** — using `cpc` misattributes social traffic to paid search channels
+- **Campaign Name: match exactly** to the Facebook Ad campaign name for clean cross-referencing
+- **Consistent naming conventions across all campaigns** — generic labels like `paid_social` lose granularity
+
 ## Acqura's Angle
 
-UTM tracking is table stakes — but its failure modes (missing tags, inconsistent naming conventions, silent match failures) are a recurring source of broken reporting. Acqura's GTI framework should account for UTM convention standardization as a baseline data quality layer. Clients with messy UTM hygiene will have upstream data problems that corrupt any intelligence built on top.
+UTM tracking is table stakes — but its failure modes (missing tags, inconsistent naming, silent match failures, case inconsistency) are a recurring source of broken reporting. Acqura's GTI framework should account for UTM convention standardisation as a baseline data quality layer. Clients with messy UTM hygiene will have upstream data problems that corrupt any intelligence built on top. UTM is also the floor — not the ceiling. [[marketing-measurement-triangulation]] maps what sits above it.
 
 ## Contradictions / Open Questions
 
-- Server-side attribution tools (Northbeam, Triple Whale) increasingly bypass UTM-based tracking in favour of first-party data signals. Is UTM tracking a declining standard or still foundational?
+- First-party attribution tools (Northbeam, Triple Whale, [[ruler-analytics]]) increasingly bypass or augment UTM-based tracking with first-party cookie data. Is UTM tracking a declining standard or still foundational?
 - How should Acqura handle clients who have historically broken UTM conventions — retroactive cleanup vs. forward-only tagging?
 
 ## Sources
 
 - [[owox-utm-id-ad-tracking]] — introduced utm_id requirement in GA4; explained the cost import dependency
+- [[ruler-facebook-ads-ga4-2026]] — Facebook-specific UTM best practices; UTM as baseline layer only
