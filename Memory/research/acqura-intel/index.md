@@ -10,7 +10,7 @@
 
 | Page | Description | Date ingested |
 |------|-------------|---------------|
-| — | No sources yet. | — |
+| [[owox-utm-id-ad-tracking]] | OWOX article on utm_id requirement for GA4 non-Google cost data import | 2026-04-20 |
 
 ---
 
@@ -18,7 +18,7 @@
 
 | Page | Description | Last updated |
 |------|-------------|--------------|
-| — | No entities yet. | — |
+| [[owox]] | Analytics/cost-import tool; automates non-Google ad cost data into GA4 and BigQuery | 2026-04-20 |
 
 ---
 
@@ -26,7 +26,8 @@
 
 | Page | Description | Last updated |
 |------|-------------|--------------|
-| — | No concepts yet. | — |
+| [[utm-tracking]] | UTM parameter conventions; utm_id as required GA4 cost import join key | 2026-04-20 |
+| [[ga4-cost-data-import]] | GA4 native mechanism for non-Google cost/clicks/impressions; manual, brittle, patch solution | 2026-04-20 |
 
 ---
 
