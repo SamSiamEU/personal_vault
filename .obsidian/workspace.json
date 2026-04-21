@@ -179,6 +179,8 @@
   },
   "active": "3e9b301782f14329",
   "lastOpenFiles": [
+    "Memory/research/salesforce-architect/wiki/entities/marketing-intelligence.md",
+    "Memory/research/salesforce-architect/wiki/sources/marketing-cloud-growth-implementation-guide.md",
     "Memory/research/salesforce-architect/raw/Gilead Presentation MI 2_26_26 PDF.pdf",
     "Memory/research/salesforce-architect/raw/mktg_implementation_guide.pdf",
     "Memory/research/salesforce-architect/wiki/concepts/cross-cloud-data-models.md",
@@ -205,7 +207,6 @@
     "Memory/research/salesforce-architect/wiki/sources/platform-sharing-architecture.md",
     "Memory/research/salesforce-architect/wiki/sources/platform-multitenant-architecture.md",
     "Memory/research/salesforce-architect/wiki/sources/async-processing-lightning-platform.md",
-    "Memory/research/salesforce-architect/wiki/sources/agentic-enterprise-it-architecture.md",
     "Memory/research/salesforce-architect/raw/seamless_cross_cloud_identity_solution_kit.pdf",
     "Memory/research/salesforce-architect/raw/Solution Kit - Digital Wallet in SDO.pdf",
     "Memory/research/salesforce-architect/raw/agentforce_implementation_customer.pdf",
@@ -213,7 +214,6 @@
     "Memory/research/salesforce-architect/raw/transactional_email_solution_kit.pdf",
     "Memory/research/salesforce-architect/raw/SFCC Roadmap items.pdf",
     "Memory/research/salesforce-architect/raw/cross_cloud_data_models_solution_kit.pdf",
-    "Memory/research/salesforce-architect/raw/conversational_campaigns_whatsapp_solution_kit.pdf",
-    "Memory/research/cooking-baking/wiki/analyses"
+    "Memory/research/salesforce-architect/raw/conversational_campaigns_whatsapp_solution_kit.pdf"
   ]
 }

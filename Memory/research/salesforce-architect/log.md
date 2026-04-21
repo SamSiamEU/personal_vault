@@ -108,6 +108,31 @@
 - Partial reads from prior session: Agentic Patterns (offset 400+), Classic Integration Patterns (offset 200+), Salesforce Platform Transformed (offset 150+), Data 360 Integration Patterns (full)
 - overview.md updated to reflect cross-cloud coverage additions
 
+## [2026-04-21] ingest | 2 new raw files — MC Growth Implementation Guide + Gilead Presentation
+
+**Files found**:
+- `mktg_implementation_guide.pdf` — Salesforce official Marketing Cloud Growth/Advanced Edition Implementation Guide (Summer '25, May 2025); external reference; fully read (2967 lines)
+- `Gilead Presentation MI 2_26_26 PDF.pdf` — Salesforce presales/demo deck for Gilead (pharma); own IP (Dennis as "Senior Manager, Architects"); dated Feb 27, 2026; fully read; **solution page pending — awaiting Dennis's context on engagement outcome and architectural decisions**
+
+**Key discovery**: Two distinct products are both called "Marketing Cloud":
+1. **Legacy Marketing Cloud** (Email Studio / Journey Builder / AMPScript / SSJS) — separate infrastructure, Data Cloud optional
+2. **Marketing Cloud Growth/Advanced Edition** — native Salesforce Platform, Data Cloud *required*, Flow-based campaigns, Unified Messaging
+
+This distinction was not previously represented in the wiki. MC Growth/Advanced Edition is architecturally closer to a Salesforce CRM + Data Cloud extension than to legacy MC.
+
+**Source pages created (1)**:
+- [[marketing-cloud-growth-implementation-guide]] — Full setup guide: Data Kits, Unified Messaging, consent in Data Cloud DMOs, identity resolution rulesets, web tracking, scoring, AI features (STO/Metrics Guard/Engagement Scoring/Engagement Frequency), limits, permission sets
+
+**Entity pages created (1)**:
+- [[marketing-intelligence]] — New product entity: paid-media analytics on Data Cloud + Tableau Next; pre-built SDM; MTA; HVAs; Agentforce autonomous optimization; pharma DTC use case
+
+**Entity pages updated (1)**:
+- [[marketing-cloud]] — Added prominent warning distinguishing Legacy vs New; added full MC Growth/Advanced capabilities section; updated Contradictions/Open Questions; added source link
+
+**Pending**:
+- Gilead presentation: own IP solution page awaiting Dennis's input on engagement context, outcome, and architectural decisions worth capturing
+- [[data-360]] and [[overview.md]] minor updates for MC Growth/Advanced integration story could be done after Dennis confirms Gilead context
+
 ## [2026-04-21] ingest | Partial Reads Completion — 4 large files fully read and wiki updated
 
 **Files completed**:

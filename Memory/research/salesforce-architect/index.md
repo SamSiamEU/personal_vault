@@ -45,6 +45,7 @@
 | [[digital-wallet-sdo-solution-kit]] | Digital Wallet in demo orgs; TenantEnrichedUsageEvent DLO; consumption tracking for Agentforce and Data 360 | 2026-04-21 |
 | [[marketing-cloud-engage-tips]] | AMPScript/SSJS scripting patterns; TreatAsContent bridge; error handling template for MC Email Studio | 2026-04-21 |
 | [[sfcc-roadmap]] | SFCC B2C Commerce roadmap: Native Intelligent Search, Zero Copy to Data Cloud, Composable Storefront, MCP tools, AI Shopping Platform discovery, BYO Payments | 2026-04-21 |
+| [[marketing-cloud-growth-implementation-guide]] | MC Growth/Advanced Edition setup: Data Kits, Unified Messaging, consent in Data Cloud DMOs, Flow-based campaigns, scoring, Einstein AI features | 2026-04-21 |
 
 ---
 
@@ -59,6 +60,7 @@
 | [[marketing-cloud]] | Marketing automation: Email Studio, Journey Builder, AMPScript/SSJS, Marketing Cloud Connect, cross-cloud engagement | 2026-04-21 |
 | [[experience-cloud]] | Customer-facing portal/community platform; identity hub in cross-cloud B2C architectures; profile SoR | 2026-04-21 |
 | [[commerce-cloud]] | B2C/B2B ecommerce platform (SFCC/SFRA); shopping data SoR; connector-based cross-cloud integration | 2026-04-21 |
+| [[marketing-intelligence]] | Paid-media analytics/optimization platform on Data Cloud + Tableau Next; MTA, SDM, HVAs, Agentforce autonomous optimization | 2026-04-21 |
 
 ---
 
