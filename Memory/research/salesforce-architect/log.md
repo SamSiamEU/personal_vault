@@ -12,6 +12,29 @@
 - Scope: Sales/Service/Experience/Data Cloud, Agentforce, integration patterns, DevOps, governance, industry clouds, partner ecosystem
 - Status: ready for first ingest
 
+## [2026-04-21] ingest | Gilead Marketing Intelligence — Own IP Solution Page
+
+**Source**: `raw/Gilead Presentation MI 2_26_26 PDF.pdf` — Salesforce presales deck delivered to Gilead, Feb 27 2026; Dennis listed as Senior Manager, Architects on delivery team
+**Filing**: Own IP solution page (proposed solution architecture for Gilead, not generic documentation)
+
+**Key content captured**:
+- MI data pipeline architecture: two-path model (OOTB Managed Connector vs Total Connect/Custom API)
+- SDM layer structure: Raw DLOs → Transform (Add IDs + Enrichments) → Ads DLO → Star Schema → Locked SDM DMOs → Open SDM (custom extensions)
+- Locked SDM objects: Campaign DMO, AdGroup DMO, Creative DMO, Ads Facts DMO, Segment DMO + Calc Dims/Meas
+- Open SDM: inherits locked SDM relationships, adds new relationships + custom Calc Dims/Meas without breaking base schema
+- Pharma DTC HVA funnel: Awareness (Symptom Checker, Prevention Guide, Article) → Consideration/Decision (Find a Doctor, Discussion Guide, Video) → Conversion (QR Scan, Treatment Adherence Sign-Up, PSP Enrollment)
+- MTA: tracks full patient journey from unbranded search to PSP enrollment; identifies initiator / nurture / conversion channels
+- Cross-Channel Segment Intelligence: unified Tableau Next dashboard for paid (Meta, Google) + owned (Email, SMS) audience performance
+- Agentforce autonomous budget optimization with guardrail discussion noted as lesson learned
+- Client problem: 8–10 week reporting lag → 3–4 weeks target; fragmented tools consolidation
+
+**Solution page created**:
+- [[gilead-marketing-intelligence-2026]] — DTC pharma MI solution, SDM architecture, HVA funnel, MTA pattern
+
+**Index updated**: Solutions section now has first entry.
+
+**Synthesis note**: The Gilead deck is the first own IP in the wiki. It surfaces the locked + open SDM extensibility model as a key architectural detail not captured in the MI entity page — worth knowing for any client that immediately asks "what about our data that isn't in the connector library." The pharma HVA funnel template is directly reusable across other pharma DTC clients.
+
 ## [2026-04-21] ingest | Batch Ingest — 18 raw sources from raw/ directory
 
 **Source type**: External references (all sources are Salesforce/MuleSoft official documentation and architectural guides)

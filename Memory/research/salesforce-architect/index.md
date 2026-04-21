@@ -10,7 +10,7 @@
 
 | Page | Description | Date |
 |------|-------------|------|
-| — | No solutions filed yet. | — |
+| [[gilead-marketing-intelligence-2026]] | Marketing Intelligence proposed solution for Gilead DTC pharma: SDM pipeline, MTA, HVA funnel (Awareness→PSP), Cross-Channel Segment Intelligence, Agentforce optimization | 2026-04-21 |
 
 ---
 

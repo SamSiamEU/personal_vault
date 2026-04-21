@@ -31,17 +31,41 @@ Distinct from Marketing Cloud (email/journey automation): Marketing Intelligence
 - **Data Cloud foundation**: MI data pipelines write to Data Cloud DMOs + DLOs via SDM; zero-copy between MI and other Data Cloud use cases (segmentation, identity resolution, Agentforce grounding)
 
 ## Architecture
+
+MI data pipeline has two paths depending on connector availability:
+
+**Path 1 — OOTB Managed Connector (standard paid media sources)**
 ```
-Paid Media Sources (Meta, Google, programmatic, email, SMS)
-    ↓  [API Connectors — 3-click, OOTB]
-Data Ingestion Layer (Data Cloud Data Streams + DLOs)
-    ↓  [SDM Transformation]
-Semantic Data Model (Campaign/Ad/AdGroup/Creative/Segment DMOs + Calculated Insights)
-    ↓  [Tableau Next + Data Cloud Reports]
-MI Dashboards (DCR) — embedded in Salesforce
+Paid Media Source (Meta, Google, programmatic)
+    ↓  [OOTB API Connector — no partner needed]
+Data Stream → Raw DLOs
+    ↓  [Transform: Add IDs + Enrichments]
+Ads DLO (with Ads Formulas)
+Delivery Report DLO → Star Schema
+Conv. DLO           → Star Schema
+    ↓
+Locked SDM: Campaign / AdGroup / Creative / Ads Facts / Segment DMOs
+    + Calc Dims + Calc Meas
+    ↓
+MI Dashboards (Data Cloud Reports + Tableau Next)
     ↓  [Agentforce Actions]
-Autonomous Campaign Optimization (budget adjustments, pause/scale)
+Autonomous Campaign Optimization
 ```
+
+**Path 2 — Total Connect (custom API, non-standard sources)**
+```
+Custom Source
+    ↓  [Total Connect — Custom API connector + Manual Mapping]
+Data Stream → Raw DLOs → Transform → Star Schema → DMOs
+    ↓
+Locked SDM (inherited, read-only base schema)
+    ↓
+Open SDM: + New Relationships + New Calc Dims + New Calc Meas
+    ↓
+MI Dashboards (Data Cloud Reports + Tableau Next)
+```
+
+The **locked SDM** ensures consistent base schema across all connectors. The **open SDM** layer allows client-specific extensions (custom KPIs, pharma metrics like Cost Per Enrollment) without breaking the base model — critical for enterprise clients with non-standard data sources.
 
 ## Licensing / Pricing
 - [Specific rates unknown] — built on Salesforce Platform; requires Data Cloud licensing
@@ -58,7 +82,7 @@ Autonomous Campaign Optimization (budget adjustments, pause/scale)
 ## Weaknesses / Gaps
 - Connector library may not cover all niche/regional ad platforms — validate coverage before committing
 - Autonomous campaign optimization via Agentforce is new — maturity and guardrails need evaluation for high-spend campaigns
-- "Total Connect" (custom API connector) mentioned for non-standard sources — complexity unknown
+- Total Connect (custom API connector) is confirmed as the path for non-standard sources; uses manual mapping + open SDM extensions — validate per-client whether their non-standard sources need this path and factor in mapping effort
 - Performance for very large accounts (high-frequency ad data, 10M+ events/day) not documented
 
 ## Known Gotchas
@@ -73,3 +97,4 @@ Autonomous Campaign Optimization (budget adjustments, pause/scale)
 
 ## Sources
 - Gilead Presentation MI 2_26_26 PDF (own IP — presales deck) — product overview, SDM architecture diagram, MTA + HVAs use cases, pharma DTC application, Agentforce integration
+- [[gilead-marketing-intelligence-2026]] — detailed pipeline architecture (OOTB vs Total Connect paths), locked/open SDM structure, pharma HVA funnel, lessons learned
