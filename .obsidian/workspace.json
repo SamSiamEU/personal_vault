@@ -11,10 +11,14 @@
             "id": "3e9b301782f14329",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Memory/research/salesforce-architect/raw/Data 360 Architecture  Data 360 and Integration.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Data 360 Architecture  Data 360 and Integration"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Memory/research/salesforce-architect/raw/Data 360 Architecture  Data 360 and Integration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Data 360 Architecture  Data 360 and Integration"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Memory/research/salesforce-architect/raw/Data 360 Architecture  Data 360 and Integration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Data 360 Architecture  Data 360 and Integration"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Memory/research/salesforce-architect/raw/Data 360 Architecture  Data 360 and Integration.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Data 360 Architecture  Data 360 and Integration"
             }
           }
         ]
@@ -177,8 +184,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f60b14ee5c7126db",
+  "active": "3e9b301782f14329",
   "lastOpenFiles": [
+    "Memory/research/salesforce-architect/raw/Asynchronous Processing on the Lightning Platform  Get Started with Fundamentals.md",
+    "Memory/research/salesforce-architect/raw/Data 360 Architecture  Data 360 and Integration.md",
+    "Memory/research/salesforce-architect/raw/Platform Sharing Architecture  Get Started with Fundamentals.md",
+    "Memory/research/salesforce-architect/raw/Platform Multitenant Architecture  Get Started with Fundamentals.md",
+    "Memory/research/salesforce-architect/raw/The Salesforce Platform - Transformed for Tomorrow  Get Started with Fundamentals.md",
     "Memory/research/salesforce-architect/raw/seamless_cross_cloud_identity_solution_kit.pdf",
     "Memory/research/salesforce-architect/raw/Solution Kit - Digital Wallet in SDO.pdf",
     "Memory/research/salesforce-architect/raw/agentforce_implementation_customer.pdf",
@@ -191,7 +203,6 @@
     "Memory/sessions/acqura-2026-04-21.md",
     "Memory/research/cooking-baking/wiki/analyses",
     "Memory/research/cooking-baking/wiki/sources",
-    "Memory/research/cooking-baking/wiki/concepts",
     "Memory/research/cooking-baking/wiki/overview.md",
     "Memory/research/business-strategy/wiki/overview.md",
     "Memory/research/ai-claude/wiki/overview.md",
@@ -210,10 +221,6 @@
     "Memory/research/salesforce-architect/CLAUDE.md",
     "Memory/research/acqura-intel/wiki/concepts/impression-attribution.md",
     "Memory/research/acqura-intel/wiki/concepts/incrementality-testing.md",
-    "Memory/research/acqura-intel/wiki/concepts/marketing-mix-modelling.md",
-    "Memory/research/acqura-intel/wiki/concepts/first-party-mta.md",
-    "Memory/research/acqura-intel/wiki/concepts/marketing-measurement-triangulation.md",
-    "Memory/research/acqura-intel/wiki/entities/ruler-analytics.md",
-    "Memory/research/acqura-intel/wiki/sources/ruler-facebook-ads-ga4-2026.md"
+    "Memory/research/acqura-intel/wiki/concepts/marketing-mix-modelling.md"
   ]
 }
