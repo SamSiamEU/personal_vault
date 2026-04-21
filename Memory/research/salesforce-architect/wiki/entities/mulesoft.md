@@ -28,6 +28,12 @@ MuleSoft is the go-to platform for enterprise integration patterns, API manageme
 - **Trusted Agent Identity**: Cryptographic identity for agents; enables OBO token exchange (RFC 8693) and S2S for agent-to-API calls
 - **OTEL observability**: OpenTelemetry integration for distributed tracing of agent and API calls
 - **B2B / EDI**: Partner management and EDI compliance for supply chain integrations
+- **Anypoint Code Builder (ACB)**: Next-gen IDE with built-in MCP server; AI-generated integrations from natural language; Topic Center creates Agentforce-invocable actions from Anypoint Exchange assets
+- **Integration Intelligence**: Next-gen observability layer built on Data 360 + Tableau Semantics + Tableau Next — operational insights beyond OTEL
+- **Bidirectional MCP**: Salesforce/MuleSoft as MCP client (consuming external tools) AND MCP server (exposing Anypoint capabilities to agents)
+- **A2A and Inference Connectors**: Native connectors for A2A protocol and AI model inference endpoints
+- **Interpreted Connectivity**: Low/no-code integration layer for non-technical builders
+- **RPA and IDP**: Robotic Process Automation and Intelligent Document Processing for legacy system and document integration
 
 ## Licensing / Pricing
 Anypoint Platform has capacity-based pricing (vCores for CloudHub, API calls for flex gateway). Agent Fabric capabilities are additive. Exact pricing requires Salesforce contract review.
@@ -57,3 +63,5 @@ Anypoint Platform has capacity-based pricing (vCores for CloudHub, API calls for
 - [[end-user-identity-propagation-agents]] — Trusted Agent Identity, OBO/S2S patterns enforced at Flex Gateway
 - [[cloudhub-20-ha-dr]] — CloudHub 2.0 HA/DR architecture, active-active/warm/cold standby options
 - [[leveraging-mulesoft-informatica]] — MuleSoft vs Informatica positioning, "Better Together" framework
+- [[salesforce-platform-transformed-tomorrow]] — Anypoint Code Builder, Integration Intelligence, bidirectional MCP, A2A/Inference Connectors, RPA/IDP
+- [[agentic-patterns-agentforce]] — MuleSoft as A2A orchestration hub (Multi-issue Resolution recipe), MuleSoft Agent Broker in collaborative patterns

@@ -46,28 +46,48 @@ Use the pattern selection matrix when starting any Salesforce integration projec
 
 #### 2. Remote Process Invocation — Fire and Forget
 - **Scenario**: Salesforce triggers external process, doesn't wait for completion
-- **Best solution**: Outbound Messaging (workflow-based) or Apex @future/Queueable
+- **Best solution**: Flow-driven Platform Events / Pub/Sub API (gRPC); Good = custom PE; Fit = outbound messaging; Suboptimal = async Apex callouts
+- **Platform Event publish behaviors**: "Publish After Commit" (default — rolls back on transaction failure) vs "Publish Immediately" (publishes regardless of transaction outcome); use "Publish Immediately" for audit/notification events where you want the event to persist even if the transaction rolls back
+- **72-hour replay window**: High-volume Platform Events replayable for 72 hours; GAP events (shard availability gaps) and Overflow events (exceeded limits) are edge cases requiring monitoring
+- **OmniStudio Integration Procedures**: server-side stateless orchestration; chain HTTP Actions / DataRaptor / Set Values with conditional branching, pagination, timeouts, retries, caching; invocable as "integration façades" via REST without requiring Experience Cloud
 - **Use case**: Kick off provisioning, send notification, trigger warehouse system
 
 #### 3. Batch Data Synchronization
 - **Scenario**: Bulk data movement in either direction on a schedule
-- **Best solution**: Bulk API 2.0 (external → SF) or Scheduled Apex/Batch Apex (SF → external)
+- **Best solution**: ETL tool as hub (Salesforce as spoke); Bulk API 2.0 required for middleware ETL; Batch Apex for Salesforce-to-external scheduled exports
+- **ETL hub pattern**: control tables track sync state; CDC on source for delta detection; chain/sequence ETL jobs for dependencies; group child records by parent key to avoid DML locking
+- **Bulk API 2.0**: parallel-only (no serial mode); each batch is separate transaction; returns 200 HTTP — inspect body for failures; ~2K+ records threshold for Bulk API over REST
 - **Use case**: Nightly ERP sync, daily data warehouse load, weekly data cleanup
 
 #### 4. Remote Call-In
 - **Scenario**: External system creates/reads/updates/deletes Salesforce data
-- **Best solution**: REST API (CRUD operations), SOAP API (legacy), Bulk API (mass operations)
+- **Best solutions by volume/use case**:
+  - REST API: standard CRUD; 200 records per call
+  - Composite API: 25 requests/call; always returns HTTP 200 — **inspect body, not status code**; 2K+ records → Bulk API 2.0
+  - Bulk API 2.0: parallel-only; each batch separate transaction; no serial mode
+  - Pub/Sub API (gRPC): preferred for real-time event publishing into Salesforce
+  - Platform Events: 100K/250K per hour limits; 72-hour replay
+  - SOAP API: legacy; Enterprise/Partner WSDL
+  - Apex web/REST services: custom endpoints for specialized logic
+- **Session timeout**: 120s for queries
 - **Use case**: ERP pushes order updates; external portal creates leads; ETL tool loads accounts
 
 #### 5. UI Update Based on Data Changes
-- **Scenario**: Salesforce UI must reflect changes to Salesforce data in real time (without page refresh)
-- **Best solution**: Streaming API / CometD; Lightning Web Components with @wire reactive adapters
-- **Use case**: Live case queue; real-time dashboard; collaborative record editing
+- **Scenario**: Salesforce UI must reflect external data changes in near-real time (without page refresh)
+- **Best solution**: Platform Events + CometD/Bayeux (JavaScript library as static resource); Apex Trigger/Flow publishes event; Lightning component subscribes via CometD
+- **72-hour replay**: Events available for replay even if consumer was offline; no delivery/ordering guarantee; **Bulk API changes do NOT trigger events** — only API/UI/Apex changes
+- **PushTopic pattern**: older approach for subscribing to specific record changes via Streaming API
+- **Use case**: Payment confirmation display, case closed notification, live case queue
 
 #### 6. Data Virtualization
-- **Scenario**: Salesforce accesses external data in real time without replicating it
-- **Best solution**: External Objects (Salesforce Connect) with OData or custom adapter
-- **Use case**: Display ERP inventory on Opportunity; show real-time pricing from external catalog
+- **Scenario**: Salesforce displays or modifies external data without replicating it
+- **Best solution**: Salesforce Connect with OData 2.0/4.0 adapter, cross-org adapter (uses REST API directly), or custom Apex adapter (Connector Framework)
+- **External Object relationship types**: Lookup (18-char SF record ID), External Lookup (External ID standard field on external object), Indirect Lookup (custom external ID + unique field on standard/custom object)
+- **OData paging**: server-driven (external system controls page sizes) vs client-driven (OData adapter controls); max 2,000 rows/page regardless; **High Data Volume option** bypasses most rate limits
+- **120s timeout**: same as all other Apex callout patterns; external system must respond in time
+- **External objects available via**: SOQL, SOSL, Metadata API, AppExchange packages, global search, list views, page layouts, Lightning mobile
+- **Request & Reply is suboptimal**: real-time but requires custom page/button; higher code maintenance
+- **Use case**: Display ERP inventory on Opportunity; real-time pricing from external catalog; cross-org data mashup
 
 ### Middleware Terminology Reference
 Key terms relevant to integration architecture decisions:
@@ -92,4 +112,4 @@ Key terms relevant to integration architecture decisions:
 External Services + Flow is the best default for new Salesforce integrations that need synchronous callouts — it's declarative, version-controlled, and doesn't require custom Apex. For complex orchestrations spanning multiple systems, put the logic in MuleSoft, not Apex. Apex is for Salesforce-specific logic, not integration orchestration.
 
 ## Sources
-- [[salesforce-integration-patterns-classic]] — Complete pattern reference with selection matrices, solution options, trade-offs
+- [[salesforce-integration-patterns-classic]] — Complete pattern reference with full implementation details, selection matrices, solution options, security appendix, EDA appendix

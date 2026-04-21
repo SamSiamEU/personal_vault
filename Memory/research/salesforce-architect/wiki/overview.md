@@ -2,7 +2,7 @@
 
 > Master synthesis. The evolving answer to: *"What do I know about Salesforce architecture, and where does my own practice stand?"*
 > Not an index — a living memo. Updated when new ingests meaningfully shift the picture.
-> Last updated: 2026-04-21 (post full ingest of all 27 raw sources)
+> Last updated: 2026-04-21 (post completion of all partial reads — all 27 sources now fully read and wikified)
 
 ---
 
@@ -23,42 +23,57 @@ The platform is transitioning from _application-centric_ (apps own data and logi
 ## Domain Coverage
 
 ### Agentic Architecture
-**Well covered** after batch ingest:
-- [[agentic-design-patterns]] — 15 named patterns, 5 agent types, implementation recipes for each type
+**Well covered** — including full implementation depth:
+- [[agentic-design-patterns]] — 15 named patterns, 5 agent types, all implementation recipes, Autonomous (goal+strategy), Collaborative (Slack/episode state), 5 full step-by-step recipes, 4 data integration patterns for agents
 - [[agent-orchestration-archetypes]] — SOMA/MOMA/Multi-Vendor A2A — the system-level topology decisions
 - [[adlc]] — Full lifecycle from ideation to production monitoring; invest in Phase 5 (tuning) from day one
 - [[mcp-a2a-protocols]] — MCP (agent-to-tool) and A2A (agent-to-agent): practical vs. governance-mature split
+- [[agentforce]] entity — now includes Agentforce 3.0: Python event-driven async framework, voice (ASR/TTS/WebRTC), Agentforce Script (state-machine determinism), bidirectional A2A (client and server), MCP client
 
-**Starting points for client work**: Greeter → Operator → Orchestrator as default architecture. Map business requirements to 5 agent types before jumping to implementation. ADLC Phase 5 must be designed in sprint 1.
+**Starting points for client work**: Greeter → Operator → Orchestrator as default architecture. Map business requirements to 5 agent types before jumping to implementation. ADLC Phase 5 must be designed in sprint 1. For data integration in agents: match data type to pattern (external tools → MCP; transactional → MCP/MuleSoft SAGA; analytical → Calculated Insights API; semantic → RAG/Data Graph).
+
+**New clarity on Agentforce 3.0**: It is closer to a traditional Python application framework (event-driven, async, stateful via Agentforce Script) than a wizard-configuration tool. Voice is now a first-class channel. Architects should plan for state management from day one — Agentforce Script state-machine handles this for deterministic workflows.
 
 ### Integration
-**Well covered**:
-- [[salesforce-integration-patterns]] — Canonical 6-pattern reference; selection matrix by intent × timing
-- [[async-processing-patterns]] — All Lightning Platform async patterns; Platform Events as the cleanest default
+**Well covered** — all patterns at implementation depth:
+- [[salesforce-integration-patterns]] — Complete 6-pattern reference with full implementation detail (all solutions, API limits, Platform Event publish behaviors, Composite API gotcha, External Object relationship types)
+- [[async-processing-patterns]] — All Lightning Platform async patterns; Platform Events as the cleanest default; OmniStudio Integration Procedures as "integration façades"
 - [[identity-propagation-patterns]] — OBO/S2S/In-Task for agent identity through call chains
 - [[mulesoft-agent-fabric]] — 4-pillar governance framework for multi-vendor agent ecosystems
 - [[cloudhub-ha-dr]] (via [[mulesoft]] entity) — Active-active with Route 53 for enterprise MuleSoft SLAs
+- [[data-360]] entity — now includes complete Data 360 integration pattern set (11 patterns)
 
-**Gaps**: Data 360 Integration Patterns guide (partial read — patterns 2-11 need full review); Classic patterns 2-6 details
+**Gaps**: None for core patterns. Data 360 activation patterns (real-time data actions via Flow vs API vs webhook) merit further hands-on testing.
 
 **Key principle**: Orchestration logic belongs in MuleSoft, not Apex. Apex for Salesforce-specific logic only.
 
+**Critical gotchas from full read**:
+- Composite API always returns HTTP 200 — inspect body for subrequest failures
+- Bulk API 2.0 is parallel-only — each batch is a separate transaction; no serial mode
+- Platform Event "Publish After Commit" vs "Publish Immediately" — critical choice for audit/notification events
+- External Object relationships have 3 types depending on the lookup key available
+
 ### Data Architecture
-**Well covered**:
-- [[data-360]] — Full architecture: lakehouse, DLO/DMO, identity resolution, segmentation, BYOM, ABAC
+**Well covered** — including integration patterns at implementation depth:
+- [[data-360]] — Full architecture: lakehouse, DLO/DMO, LLS, DPC, Semantic Layer, Document AI, Personalization Services, Vegacache, identity resolution, segmentation, BYOM, ABAC, all activation patterns, Data Cloud One
 - [[data-clean-rooms]] — Zero-copy clean room model, PETs, Salesforce implementation, activation gap solution
 - [[sharing-model]] — Complete record access model; OWD-first design philosophy
 
-**Gaps**: Data Cloud One multi-org architecture; CEDAR policy language specifics; Semantic Layer / EKG product mapping
+**Gaps**: CEDAR policy language specifics (syntax, declarative vs programmatic configuration); Data Cloud One conflicting DMO schema resolution; Semantic Layer / EKG product mapping details
 
 **Key insight**: Data quality upstream is the #1 dependency for everything downstream — segmentation accuracy, clean room match rates, AI agent grounding. Address before promising outcomes.
 
+**New pattern clarity**:
+- Zero-copy is now bi-directional and complete: inbound (External DLO → federated query) + outbound (Data Share → Snowflake/Databricks read-only views) + File Federation (Apache Iceberg from S3)
+- Data Cloud One solves the multi-org problem natively: Home Org + Companion Orgs, no custom code, Data Spaces for governance
+- Data Graph API (?live=true) is the real-time activation pattern for sub-second personalization — not batch
+
 ### Platform Fundamentals
-**Well covered**:
-- [[salesforce-platform]] — MT architecture, governor limits, sharing model, bulk processing
+**Well covered** — including internal platform depth:
+- [[salesforce-platform]] — MT architecture, governor limits, sharing model, bulk processing; SalesforceDB (PostgreSQL-derived, 1.1T txn/month, LSM, 3 AZ, zero-downtime schema ops); AIOps Agent (91% proactive detection, 79% auto-resolution, saves 2,800 eng-hours/week); SeaS (Solr, 6K nodes, Milvus vectors); availability architecture (10 standards, 250K changes/week, blue/green+canary)
 - [[hyperforce]] — Infrastructure model, zero-trust, Operating Zones for data residency, US East control plane dependency
 
-**Gaps**: Platform Transformed guide partially read (lines 150+) — Metadata Framework evolution, AI layer details
+**Gaps**: Metadata Framework deep-dive (declarative extension chain, compile/cache lifecycle at scale); AIOps XGenOps LLM vs Agentforce/Atlas relationship
 
 ### DevOps & Release Management
 **Not yet covered** — no sources ingested on CI/CD, SFDX, scratch orgs, Copado/Gearset/Flosum.
@@ -121,10 +136,12 @@ The platform is transitioning from _application-centric_ (apps own data and logi
 | CPQ & Revenue Cloud | Not started | No sources yet |
 | Field Service Lightning | Not started | No sources yet |
 | Marketing Cloud Engage | Covered | AMPScript/SSJS patterns; strategic architecture still thin |
-| Commerce Cloud (SFCC) | Covered | Winter '22 cross-cloud patterns; SFCC roadmap needs OCR |
-| SFCC Roadmap PDF | Covered | OCR'd via tesseract; full 13-page roadmap ingested |
-| Autonomous agent patterns | Partial | agentic-patterns-agentforce only read to line 400 |
-| Real-Time Data Actions (Data 360) | Partial | Integration patterns guide only read 100 lines |
+| Commerce Cloud (SFCC) | Covered | Winter '22 cross-cloud + full SFCC roadmap ingested |
+| Autonomous agent patterns | Covered | Full Autonomous + Collaborative patterns + all 5 recipes now complete |
+| Real-Time Data Actions (Data 360) | Covered | Full implementation detail: identity resolution, CEDAR PDP, edge cache, sync/async |
 | Agentforce pricing/licensing | Thin | Consumption-based; Digital Wallet DLO architecture known; per-unit rates unclear |
 | Cross-cloud (B2B Commerce) | Thin | Winter '22 kits cover B2C; B2B account-based patterns not covered |
 | Marketing Cloud strategic architecture | Thin | Scripting patterns covered; MCOPS/platform evolution not covered |
+| CEDAR policy language | Thin | ABAC model documented; syntax and declarative vs programmatic config unknown |
+| Data Cloud One schema conflicts | Thin | Multi-org federation documented; conflicting DMO schemas across orgs not resolved |
+| Long-running autonomous agents | Thin | State management and rollback for hour/day-spanning agents not documented |

@@ -108,6 +108,34 @@
 - Partial reads from prior session: Agentic Patterns (offset 400+), Classic Integration Patterns (offset 200+), Salesforce Platform Transformed (offset 150+), Data 360 Integration Patterns (full)
 - overview.md updated to reflect cross-cloud coverage additions
 
+## [2026-04-21] ingest | Partial Reads Completion — 4 large files fully read and wiki updated
+
+**Files completed**:
+- `Agentic Patterns and Implementation with Agentforce.md` — lines 400–1264 (COMPLETE); Autonomous + Collaborative patterns, all 5 implementation recipes, Agentforce 3.0 (voice/Python), A2A/MCP architecture, 4-category data integration patterns
+- `The Salesforce Platform - Transformed for Tomorrow.md` — lines 150–977 (COMPLETE); SalesforceDB, LLS, DPC, AIOps Agent (91% detection / 79% resolution), SeaS, Agentforce platform layers, MuleSoft ACB+MCP, Tableau Next, AppExchange, Customer Zero, Industries, availability architecture
+- `Integration Patterns  Data 360 and Integration.md` — lines 200–1235 (COMPLETE); Patterns 2–6 full detail including Platform Event publish behaviors, OmniStudio Integration Procedures, Composite API gotcha (HTTP 200 always), Bulk API 2.0 parallel-only, Salesforce Connect External Object relationship types, OData paging; security + EDA appendix
+- `Data 360 Integration Patterns  Data 360 and Integration.md` — lines 100–1967 (COMPLETE); all 11 patterns: Kinesis/MSK, Zero-Copy Inbound (External DLO + File Federation), Zero-Copy Outbound (Data Share + Data Share Target), Data Cloud One (Home/Companion Org), Batch Activation, File Export, Connect API, Data Graph API (?live=true), Real-Time Data Actions
+
+**Source pages updated (4)**:
+- [[salesforce-integration-patterns-classic]] — removed partial read note; full Pattern 2–6 implementation details; Composite API gotcha; Bulk API 2.0 parallel-only; Platform Event publish behaviors; Salesforce Connect adapters; security + EDA appendix
+- [[data-360-integration-patterns-guide]] — removed partial read note; all 11 patterns in detail; Data Cloud One; activation patterns; Data Graph API; Real-Time Data Actions
+- [[agentic-patterns-agentforce]] — removed partial read note; Autonomous + Collaborative patterns; all 5 recipes; Agentforce 3.0; A2A/MCP implementation; 4-category data integration patterns for agents
+- [[salesforce-platform-transformed-tomorrow]] — removed partial read note; SalesforceDB; LLS; DPC; AIOps; SeaS; Agentforce platform layers; MuleSoft ACB+MCP; Tableau Next; AppExchange; Customer Zero
+
+**Entity pages updated (4)**:
+- [[agentforce]] — Agentforce 3.0 (voice/Python/Agentforce Script), A2A server capability, MCP client, platform layers
+- [[salesforce-platform]] — SalesforceDB (1.1T txn/month), SeaS (Solr/Milvus/6K nodes), AIOps (91%/79%), availability architecture, AppExchange scale
+- [[mulesoft]] — Anypoint Code Builder, Integration Intelligence, bidirectional MCP, A2A/Inference Connectors, RPA/IDP, Interpreted Connectivity
+- [[data-360]] — LLS, DPC, Semantic Layer, Document AI, Personalization Services, Vegacache, Data Cloud One, all activation patterns
+
+**Concept pages updated (2)**:
+- [[agentic-design-patterns]] — Autonomous pattern (goal+strategy layer, 3 monitoring levels), Collaborative pattern (Slack, episode state), all 5 implementation recipes, 4 data integration patterns, AgentGoal__e, long-running agent open question
+- [[salesforce-integration-patterns]] — Patterns 2–6 complete with full implementation detail
+
+**Synthesis note**: All 27 raw sources are now fully read and wikified. The partial reads were the deepest material — the four files together cover the complete agentic + platform + integration + data stack at implementation depth. Key additions to the mental model: (1) Agentforce 3.0 is a Python event-driven async framework with voice and state-machine scripting — it's closer to a traditional app framework than a wizard tool; (2) SalesforceDB is PostgreSQL-derived but purpose-built for hyperscale multitenancy at 1.1T transactions/month; (3) Data Cloud One solves the multi-org problem natively; (4) Zero-Copy is now bi-directional and complete as an architectural pattern; (5) MuleSoft ACB with built-in MCP server positions MuleSoft at the center of the MCP ecosystem, not just as an HTTP integration platform.
+
+**Status**: All raw sources ingested. Wiki coverage is comprehensive except DevOps/Release Management, Industry Clouds, CPQ, and Field Service Lightning — no sources exist for these domains.
+
 ## [2026-04-21] ingest | SFCC Roadmap Items (OCR re-ingest)
 
 **Source type**: External reference (Salesforce B2C Commerce Cloud product roadmap)

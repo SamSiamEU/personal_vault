@@ -56,9 +56,32 @@ Use these patterns as starting points when scoping an Agentforce implementation.
 - **Stream Observer (Call Coaching)**: Attaches to video/audio stream; real-time coaching, sentiment analysis, objection handling
 - **Activity Interception**: Observes UI actions; surfaces knowledge articles, next-best-actions without user prompting
 
-### Collaborative Pattern
-- Human-in-the-loop model: Conversational agent initiates → Proactive agent handles backend → Ambient agent provides guidance
-- Multi-team collaboration where different specialists (internal + external) hand off via A2A protocols
+### Key Autonomous Pattern
+- **Goal + Strategy definition layer**: process playbooks, autonomous decision criteria, fallback rules, scopes, success criteria
+- Orchestrator/choreographer agent manages the autonomous loop; no human per-step approval
+- Three monitoring levels: goal progress / operations / governance
+- Platform Event `AgentGoal__e` used to trigger goal activation (see Pipeline Builder recipe)
+- Common risks: scope creep, unintended external side-effects, no rollback — design fallback rules and approval gates for high-stakes actions
+
+### Key Collaborative Pattern
+- Shared collaboration surface (Slack); multiple agent types share data layer tracking episode state across handoffs
+- Conversational + Proactive + Ambient agents collaborate under shared context
+- Multi-team cross-org workflow — human-in-the-loop across different stakeholders
+- A2A used for specialist agent routing (Billing/Logistics/Provisioning agents as A2A servers)
+
+### Five Implementation Recipes
+1. **Service Agent (Conversational)**: Chat → CRM lookup → MuleSoft shipping API → escalation via Omni-Channel with full context
+2. **VIP Cart Recovery (Proactive)**: `Cart_Abandoned__e` Platform Event → Flow → Employee Agent → Data 360 RAG for discount calculation → MC journey enrollment
+3. **Discovery Call Assistant (Ambient)**: Zoom RTMS → Amazon Transcribe → `Transcript_Segment__e` Platform Event → Flow → Agent → Slack DM to AE
+4. **Pipeline Builder (Autonomous)**: `AgentGoal__e` Platform Event → Goal Orchestrator → Research & Qualification Agent (ZoomInfo via Data 360) → SDR Agent
+5. **Multi-issue Resolution (Collaborative)**: Agentforce Help Agent → MuleSoft Agent Broker → Billing/Logistics/Provisioning specialist agents as A2A servers
+
+### Data Integration Patterns for Agents
+Four patterns by data type:
+1. **External Tools** → MCP (Agentforce as client; AgentExchange for MCP server discovery)
+2. **Transactional data** → direct CRUD via MCP (simple) or MuleSoft API with SAGA support (multi-step)
+3. **Analytical data** → zero-copy Data 360 Calculated Insights API; streaming insights via Data Actions/Apache Flink
+4. **Semantic/unstructured data** → RAG (chunking → embedding → Milvus → hybrid search) or Data Graphs (DMOs + identity resolution + Query API)
 
 ## Key Constraints
 - All Apex-based agent actions subject to Salesforce governor limits (callouts, DML, SOQL)
@@ -77,8 +100,10 @@ The Greeter → Operator → Orchestrator hierarchy is a good default starting a
 ## Contradictions / Open Questions
 - The "Project Manager" pattern is implied but not formally listed in the 15 — may be in development
 - How "Judge & Jury" integrates with Einstein Trust Layer guardrails is not fully specified
+- Long-running autonomous agents (hours/days): token expiry, state persistence, rollback semantics not documented
+- Agentforce Script state-machine details (transition syntax, persistence mechanism) not publicly documented
 
 ## Sources
 - [[enterprise-agentic-architecture-design-patterns]] — 15 named patterns, 4 archetypes
-- [[agentic-patterns-agentforce]] — Conversational, proactive, ambient, collaborative agent recipes with implementation details
+- [[agentic-patterns-agentforce]] — All 5 agent type recipes with full implementation steps; Autonomous + Collaborative full patterns; A2A/MCP architecture; Agentforce 3.0
 - [[agent-development-lifecycle]] — How to build and test agents using ADLC + DX tooling

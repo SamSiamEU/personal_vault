@@ -26,6 +26,10 @@ Agentforce is the primary vehicle for deploying AI agents on Salesforce. Every a
 - **Agentforce DX + Python SDK**: Dev tooling for local testing, `agentSpec.yaml` for agent definitions
 - **STDM (Session Tracing Data Model)**: Observability framework — logs every step, action, and decision in audit trail
 - **Agentforce Optimization/Moments**: Continuous improvement tooling for agent performance
+- **Agentforce 3.0**: Python foundation; event-driven async framework; multimodal voice (ASR/TTS/WebRTC telephony + gateways); Agentforce Script (state-machine determinism, prevents memory loss, conditional/LLM-determined handoffs)
+- **A2A Server capability**: Agentforce acts as both A2A client (calling other agents) and A2A server (receiving task assignments); Platform Events as durable async transport; "related agents" for capability discovery
+- **MCP Client**: Agentforce as MCP client; uses MuleSoft as gateway to transform A2A → external MCP calls; AgentExchange for MCP server discovery
+- **Platform layers**: AI Platform → AI Foundational Services (AI Gateway/Feedback/RAG/Agentic Orchestration/Agent Evaluation) → Agentforce Studio (Agent Builder/Prompt Builder/Testing Center/Model Builder/Next Gen Authoring)
 
 ## Licensing / Pricing
 Consumption-based model (conversations/actions). Exact rates depend on Salesforce contract and edition. Agent credits are separate from standard Salesforce licenses.
@@ -52,9 +56,10 @@ Consumption-based model (conversations/actions). Exact rates depend on Salesforc
 - How Agentforce handles agent version management during production changes is unclear
 
 ## Sources
-- [[agentic-patterns-agentforce]] — 5 agent types, patterns for conversational/proactive/ambient/autonomous/collaborative
+- [[agentic-patterns-agentforce]] — All 5 agent types + 5 implementation recipes + Agentforce 3.0 + A2A/MCP implementation + data integration patterns
 - [[enterprise-agentic-architecture-design-patterns]] — 15 architectural patterns and 4 orchestration archetypes
 - [[agent-development-lifecycle]] — ADLC 5 phases, DX tooling, STDM, Agentforce Optimization
 - [[end-user-identity-propagation-agents]] — identity propagation from Agentforce to downstream systems
 - [[data-360-architecture]] — Data 360 as Agentforce's data foundation (DMOs, vector store, RAG)
 - [[agentic-enterprise-it-architecture]] — Agentforce positioning in 11-layer agentic IT architecture
+- [[salesforce-platform-transformed-tomorrow]] — Agentforce platform layers (AI Foundational Services, Studio), Agentforce 3.0 voice/Python, Customer Zero

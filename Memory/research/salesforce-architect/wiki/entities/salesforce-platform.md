@@ -49,8 +49,27 @@ Understanding the platform's foundational architecture — multitenancy model, m
 
 ### Metadata-Driven Architecture
 - **API First**: Every platform action accessible via API — same surface for UI and integrations
-- **AppExchange**: Third-party metadata packages (ISV apps) installable as metadata extensions
+- **AppExchange**: 10,000+ apps, 14.3M installs (Oct 2025); 2nd Gen Packaging (2020); Data 360 vector search for app discovery
 - **Validation rules, formula fields, roll-up summaries**: Declarative business logic in metadata
+
+### SalesforceDB
+- PostgreSQL-derived; compute/storage separation; Kubernetes orchestration; 3 AZ replication
+- LSM data structure: append-only transaction log + immutable storage; zero-downtime schema operations
+- 1.1 trillion transactions/month; horizontal scaling; tenant ID as part of primary key
+
+### Search as a Service (SeaS)
+- Built on Solr; ~6,000 nodes globally; compute/storage separation
+- Milvus vector store for semantic/embedding-based search; learning-to-rank
+- Agentic Search capabilities for AI-driven retrieval
+
+### AIOps Agent
+- Merlion ML ensemble: Isolation Forests + Random Forests + LSTM for anomaly detection
+- 91% proactive detection rate; 79% auto-resolution rate
+- XGenOps (fine-tuned LLM on operational data) for triage routing; saves 2,800 engineering hours/week
+
+### Availability Architecture
+- 10 standards: redundancy+failover, blast radius limits, compartmentalization, auto-scaling, fast rollbacks, load-shedding/WAF, soft dependencies (caching), async communication, fault-tolerant API calls (timeout/circuit-breaker/retry/backoff), service quota management
+- 250,000 production changes/week; blue/green with canary + staggered rollout
 
 ## Licensing / Pricing
 Enterprise/Performance/Unlimited editions have different sharing rule limits and governor limits. API access included in most editions; data storage and API call volume limits vary.
@@ -75,4 +94,4 @@ Enterprise/Performance/Unlimited editions have different sharing rule limits and
 ## Sources
 - [[platform-multitenant-architecture]] — MT_Data model, UDD, flex columns, query optimizer, governor limits
 - [[platform-sharing-architecture]] — OWD, role hierarchy, sharing rules, teams, territory management, Apex sharing, troubleshooting
-- [[salesforce-platform-transformed-tomorrow]] — Hyperforce evolution, 6 architectural principles, platform layers, cost management
+- [[salesforce-platform-transformed-tomorrow]] — SalesforceDB, AIOps, SeaS, availability architecture, Hyperforce evolution, 6 architectural principles, platform layers, Customer Zero

@@ -18,13 +18,20 @@ Data 360 is the data foundation for every serious Salesforce architecture today.
 ## Key Capabilities
 
 ### Data Architecture
-- **Lakehouse foundation**: Apache Iceberg/Parquet on Hyperforce; low-latency storage (NVMe LLS) for real-time layer
+- **Lakehouse foundation**: Apache Iceberg/Parquet on Hyperforce; open table formats; petabyte-scale
+- **Low Latency Store (LLS)**: NVMe SSD petabyte-scale durable cache between memory and lakehouse; real-time layer for sub-second event processing
+- **Data Processing Controller (DPC)**: JaaS (Jobs as a Service) across Spark/KRC; supports BYOC (Java/Python/Spark)
+- **Semantic Layer**: Declarative query language across DMOs; abstract SQL joins for analysts and agents
+- **Document AI**: Invoice/resume/unstructured document processing integrated into the data platform
+- **Personalization Services Platform**: A/B/n testing and multi-arm bandit optimization for real-time personalization
+- **Vegacache**: Redis-based cache layer; 2 trillion requests/day; sub-millisecond latency
 - **Data Lake Objects (DLOs)**: Schema-flexible raw data storage; append-only, preserves source fidelity
 - **Data Model Objects (DMOs)**: Canonical semantic layer with 200+ standard objects; the join surface for agents and analytics
-- **Data Spaces**: Logical tenant isolation within one org — scoped by region, regulation, or partnership
+- **Data Spaces**: Logical tenant isolation within one org — scoped by region, regulation, or partnership; shared across orgs via Data Cloud One
 - **SNCE/CDF**: Serverless incremental compute for DLO → DMO transformation; replaces full-refresh ETL
 - **270+ connectors**: Direct connectors to Salesforce clouds, AWS S3, BigQuery, Snowflake, Kinesis, Kafka, and more
-- **Zero-copy federation**: Query external data (Snowflake, S3) without physical replication; bi-directional
+- **Zero-copy federation (inbound)**: External DLO is a metadata pointer; query pushdown to Snowflake/Databricks; File Federation via Apache Iceberg/Delta Lake direct from S3/ADLS/GCS
+- **Zero-copy sharing (outbound)**: Data Share → Data Share Target; external warehouse queries Data 360 DMOs/CIOs as read-only views via Snowflake/Databricks; bi-directional zero-copy loop complete
 
 ### Identity & Profiles
 - **Identity resolution**: Deterministic + probabilistic matching rules; creates Unified Individual (Golden Record)
@@ -42,6 +49,11 @@ Data 360 is the data foundation for every serious Salesforce architecture today.
 - **Real-time segmentation**: Streaming-based; updates audiences as signals arrive
 - **Waterfall segmentation**: Priority-ordered segment evaluation
 - **Activation targets**: Marketing Cloud, Meta Ads, Google Ads, ad networks, external platforms, clean rooms
+- **Batch Activation**: Segment → Activation → MC Shared Data Extensions, ad platforms, CRM; consent-aware; idempotency key = Segment ID + Activation ID + Target System ID
+- **File Export Activation**: Segment → S3/Azure Blob/GCS/SFTP as CSV/Parquet/JSON; for compliance archival, external ML, BI
+- **Data Graph API**: GET /api/v1/dataGraph/{entity}/{id}; pre-materialized denormalized JSON; ?live=true for real-time vs cached; sub-second; for real-time decisioning and personalization
+- **Real-Time Data Actions**: Sub-second activation triggered by signals; CEDAR policy at PDP; synchronous (offer token) or async orchestration; rate limiting required
+- **Data Cloud One**: Home Org + Companion Orgs model; Data Spaces shared explicitly; no custom code; near-real-time sync
 
 ### Security
 - **Hyperforce zero-trust**: Data never leaves Salesforce boundary without explicit policy
@@ -82,5 +94,6 @@ Consumption-based credit model. Credits consumed by: rows processed, query compl
 - [[data-360-architecture]] — Comprehensive architecture overview: lakehouse, real-time layer, DMOs, SNCE, identity resolution, segmentation, Hyper
 - [[data-360-security-architecture]] — Hyperforce zero-trust, ABAC/CEDAR, OLS/FLS/RLS, CMK/BYOK, AWS PrivateLink
 - [[data-360-clean-rooms]] — Zero-copy clean room model, PETs, audit trail, use cases across industries
-- [[data-360-integration-patterns-guide]] — Data 360 inbound/outbound integration patterns: batch, streaming, zero-copy, activation, Data Graph API
-- [[agentic-patterns-agentforce]] — Data 360 as grounding layer for conversational/proactive/ambient agents
+- [[data-360-integration-patterns-guide]] — Complete 11-pattern reference: all ingestion, zero-copy, Data Cloud One, all activation patterns
+- [[agentic-patterns-agentforce]] — Data 360 as grounding layer: RAG, vector store, Calculated Insights API, Data Graph, streaming insights
+- [[salesforce-platform-transformed-tomorrow]] — LLS, DPC, Semantic Layer, Document AI, Personalization Services, Vegacache
