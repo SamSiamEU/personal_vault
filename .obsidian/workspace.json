@@ -179,6 +179,10 @@
   },
   "active": "3e9b301782f14329",
   "lastOpenFiles": [
+    "Memory/research/cooking-baking/raw",
+    "Memory/research/business-strategy/raw",
+    "Memory/research/ai-claude/raw",
+    "Memory/research/salesforce-architect/raw",
     "Memory/research/salesforce-architect",
     "Memory/research/acqura-intel/wiki/concepts/impression-attribution.md",
     "Memory/research/acqura-intel/wiki/concepts/incrementality-testing.md",
@@ -201,16 +205,12 @@
     "Memory/research/acqura-intel/wiki/concepts",
     "Memory/research/acqura-intel/wiki/entities",
     "Memory/research/acqura-intel/raw/assets",
-    "Memory/research/acqura-intel/raw",
     "Memory/research/acqura-intel/wiki/overview.md",
-    "Memory/research/acqura-intel/wiki",
     "Memory/research/acqura-intel/log.md",
     "Memory/research/acqura-intel/index.md",
     "Memory/research/acqura-intel/CLAUDE.md",
     "Memory/SOUL.md",
     "Untitled.md",
-    "Memory/research/NOTE-TEMPLATE.md",
-    "Memory/research/business-strategy",
-    "Memory/research/acqura-intel"
+    "Memory/research/NOTE-TEMPLATE.md"
   ]
 }
