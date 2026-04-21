@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Memory/research/salesforce-architect/raw/The Agent Development Lifecycle From Conception to Production.md",
+                "file": "Memory/research/salesforce-architect/raw/End-User Identity Propagation in Agents.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Agent Development Lifecycle From Conception to Production"
+              "title": "End-User Identity Propagation in Agents"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Memory/research/salesforce-architect/raw/The Agent Development Lifecycle From Conception to Production.md",
+                "file": "Memory/research/salesforce-architect/raw/End-User Identity Propagation in Agents.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for The Agent Development Lifecycle From Conception to Production"
+              "title": "Backlinks for End-User Identity Propagation in Agents"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Memory/research/salesforce-architect/raw/The Agent Development Lifecycle From Conception to Production.md",
+                "file": "Memory/research/salesforce-architect/raw/End-User Identity Propagation in Agents.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from The Agent Development Lifecycle From Conception to Production"
+              "title": "Outgoing links from End-User Identity Propagation in Agents"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Memory/research/salesforce-architect/raw/The Agent Development Lifecycle From Conception to Production.md",
+                "file": "Memory/research/salesforce-architect/raw/End-User Identity Propagation in Agents.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of The Agent Development Lifecycle From Conception to Production"
+              "title": "Outline of End-User Identity Propagation in Agents"
             }
           }
         ]
@@ -186,8 +186,12 @@
   },
   "active": "3e9b301782f14329",
   "lastOpenFiles": [
-    "Memory/research/salesforce-architect/raw/Enterprise Agentic Architecture and Design Patterns.md",
+    "Memory/research/salesforce-architect/raw/MuleSoft Agent Fabric - Deep Dive.md",
+    "Memory/research/salesforce-architect/raw/End-User Identity Propagation in Agents.md",
+    "Memory/research/salesforce-architect/raw/Architecting the Agentic Enterprise with MuleSoft.md",
+    "Memory/research/salesforce-architect/raw/The Agentic Enterprise - The IT Architecture for the AI-Powered Future.md",
     "Memory/research/salesforce-architect/raw/The Agent Development Lifecycle From Conception to Production.md",
+    "Memory/research/salesforce-architect/raw/Enterprise Agentic Architecture and Design Patterns.md",
     "Memory/research/salesforce-architect/raw/Agentic Patterns and Implementation with Agentforce.md",
     "Memory/research/salesforce-architect/raw/Leveraging MuleSoft and Informatica  Data 360 and Integration.md",
     "Memory/research/salesforce-architect/raw/CloudHub 2.0 High Availability and Disaster Recovery  Data 360 and Integration.md",
@@ -217,10 +221,6 @@
     "Memory/research/ai-claude/wiki/overview.md",
     "Memory/research/cooking-baking/log.md",
     "Memory/research/business-strategy/log.md",
-    "Memory/research/ai-claude/log.md",
-    "Memory/research/cooking-baking/index.md",
-    "Memory/research/business-strategy/index.md",
-    "Memory/research/ai-claude/index.md",
-    "Memory/research/cooking-baking/CLAUDE.md"
+    "Memory/research/ai-claude/log.md"
   ]
 }
