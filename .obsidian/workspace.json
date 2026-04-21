@@ -177,8 +177,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3e9b301782f14329",
+  "active": "f60b14ee5c7126db",
   "lastOpenFiles": [
+    "Memory/daily/2026-04-21.md",
+    "Memory/sessions/acqura-2026-04-21.md",
     "Memory/research/cooking-baking/wiki/analyses",
     "Memory/research/cooking-baking/wiki/sources",
     "Memory/research/cooking-baking/wiki/concepts",
@@ -189,7 +191,6 @@
     "Memory/research/business-strategy/wiki/entities",
     "Memory/research/ai-claude/wiki/analyses",
     "Memory/research/ai-claude/wiki/sources",
-    "Memory/research/ai-claude/wiki/concepts",
     "Memory/research/cooking-baking/wiki/overview.md",
     "Memory/research/business-strategy/wiki/overview.md",
     "Memory/research/ai-claude/wiki/overview.md",
@@ -213,7 +214,6 @@
     "Memory/research/acqura-intel/wiki/concepts/marketing-measurement-triangulation.md",
     "Memory/research/acqura-intel/wiki/entities/ruler-analytics.md",
     "Memory/research/acqura-intel/wiki/sources/ruler-facebook-ads-ga4-2026.md",
-    "Memory/research/acqura-intel/raw/How to Track Facebook Ads in Google Analytics Complete 2026 Tutorial.md",
-    "Memory/research/acqura-intel/wiki/concepts/ga4-cost-data-import.md"
+    "Memory/research/acqura-intel/raw/How to Track Facebook Ads in Google Analytics Complete 2026 Tutorial.md"
   ]
 }
