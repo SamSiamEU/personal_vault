@@ -18,7 +18,25 @@
 
 | Page | Description | Date ingested |
 |------|-------------|---------------|
-| — | No sources ingested yet. | — |
+| [[architecting-agentic-enterprise-mulesoft]] | MuleSoft Agent Fabric, API-led connectivity for agentic enterprise, Vibes AI tooling, OTEL governance | 2026-04-21 |
+| [[enterprise-agentic-architecture-design-patterns]] | 15 named agent patterns, 4 orchestration archetypes (SOMA/MOMA/Multi-Vendor A2A) | 2026-04-21 |
+| [[mulesoft-agent-fabric-deep-dive]] | Agent Fabric 4 pillars deep-dive, Registry/Broker/Flex Gateway/Visualizer, hierarchy design | 2026-04-21 |
+| [[end-user-identity-propagation-agents]] | OBO/S2S/In-Task identity propagation patterns, Flex Gateway enforcement, RFC 8693 | 2026-04-21 |
+| [[agentic-patterns-agentforce]] | 5 agent types with CRM recipes: conversational/proactive/ambient/autonomous/collaborative | 2026-04-21 |
+| [[agent-development-lifecycle]] | ADLC 5 phases, Agentforce DX, agentSpec.yaml, Python SDK, STDM, Optimization/Moments | 2026-04-21 |
+| [[data-360-architecture]] | Data 360 lakehouse, DLO/DMO, SNCE/CDF, identity resolution, segmentation, Hyper, BYOM | 2026-04-21 |
+| [[data-360-security-architecture]] | ABAC/CEDAR, OLS/FLS/RLS/DDM, CMK/BYOK, AWS PrivateLink, compliance certifications | 2026-04-21 |
+| [[data-360-clean-rooms]] | Zero-copy clean room architecture, PETs (differential privacy, aggregation thresholds), industry use cases | 2026-04-21 |
+| [[data-360-integration-patterns-guide]] | Data 360 ingestion (batch/streaming), zero-copy, Data Cloud One, activation, Data Graph API | 2026-04-21 |
+| [[agentic-enterprise-it-architecture]] | 11-layer agentic IT architecture, 4 new layers (Agentic/Semantic/AI-ML/Orchestration), maturity model 1-4 | 2026-04-21 |
+| [[async-processing-lightning-platform]] | Future/@future, Queueable, Batch Apex, Platform Events, CDC, Bulk API — pattern comparison | 2026-04-21 |
+| [[platform-multitenant-architecture]] | MT_Data/UDD/flex columns, MT_Indexes, metadata caching, governor limits, bulk processing engine | 2026-04-21 |
+| [[platform-sharing-architecture]] | OWD, role hierarchy, sharing rules, teams, territory management, Apex sharing, restriction rules | 2026-04-21 |
+| [[cloudhub-20-ha-dr]] | CloudHub 2.0 HA/DR: active-active/warm/cold standby, Object Store V2 region constraints, Route 53 | 2026-04-21 |
+| [[salesforce-integration-patterns-classic]] | 6 classic integration patterns, selection matrix (intent × timing), middleware terminology | 2026-04-21 |
+| [[leveraging-mulesoft-informatica]] | MuleSoft + Informatica "Better Together": API connectivity vs. MDM/data governance separation | 2026-04-21 |
+| [[salesforce-platform-transformed-tomorrow]] | Platform evolution, 6 architectural principles, 10 layers, Hyperforce deep-dive, FinOps | 2026-04-21 |
+| [[pdf-solution-kits]] | 8 unread PDFs/DOCX: Agentforce implementation, SFCC roadmap, cross-cloud identity/data models, solution kits | 2026-04-21 |
 
 ---
 
@@ -26,7 +44,10 @@
 
 | Page | Description | Last updated |
 |------|-------------|--------------|
-| — | No entities yet. | — |
+| [[agentforce]] | Salesforce native AI agent platform: 5 agent types, Atlas reasoning, STDM, Einstein Trust Layer | 2026-04-21 |
+| [[mulesoft]] | Salesforce integration platform: API-led connectivity, Agent Fabric, CloudHub 2.0, Flex Gateway | 2026-04-21 |
+| [[data-360]] | Salesforce data platform: lakehouse, DMOs, identity resolution, segmentation, clean rooms, ABAC | 2026-04-21 |
+| [[salesforce-platform]] | Core Salesforce platform: multitenant/metadata-driven, Hyperforce, Apex, sharing model | 2026-04-21 |
 
 ---
 
@@ -34,7 +55,17 @@
 
 | Page | Description | Last updated |
 |------|-------------|--------------|
-| — | No concepts yet. | — |
+| [[agentic-design-patterns]] | 5 agent types + 15 named patterns (Greeter through Model of Models) with CRM use cases | 2026-04-21 |
+| [[agent-orchestration-archetypes]] | SOMA, MOMA, Multi-Vendor A2A Salesforce-led, Multi-Vendor A2A MuleSoft-led — selection guide | 2026-04-21 |
+| [[mcp-a2a-protocols]] | MCP (agent-to-tool) and A2A (agent-to-agent) protocols: architecture, use cases, governance | 2026-04-21 |
+| [[mulesoft-agent-fabric]] | Agent Fabric 4 pillars: Discover/Orchestrate/Govern/Observe — multi-vendor agent governance | 2026-04-21 |
+| [[identity-propagation-patterns]] | OBO/S2S/In-Task patterns for agent identity propagation through multi-hop call chains | 2026-04-21 |
+| [[adlc]] | Agent Development Lifecycle: 5 phases, DX tooling, testing, deployment, STDM, tuning | 2026-04-21 |
+| [[async-processing-patterns]] | Salesforce async patterns: Queueable/Batch/Scheduled Apex, Platform Events, CDC, Bulk API | 2026-04-21 |
+| [[salesforce-integration-patterns]] | 6 classic Salesforce integration patterns with selection matrix (intent × timing) | 2026-04-21 |
+| [[data-clean-rooms]] | Zero-copy clean room architecture, PETs, Salesforce Data 360 implementation, cross-industry use cases | 2026-04-21 |
+| [[hyperforce]] | Salesforce cloud infrastructure: Instances/Cells/Supercells, zero-trust, Operating Zones, FinOps | 2026-04-21 |
+| [[sharing-model]] | Salesforce sharing model: OWD → role hierarchy → sharing rules → teams → Apex sharing | 2026-04-21 |
 
 ---
 
