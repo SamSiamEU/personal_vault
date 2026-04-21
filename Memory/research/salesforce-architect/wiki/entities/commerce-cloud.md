@@ -3,7 +3,7 @@ name: Commerce Cloud (Salesforce B2C/B2B Commerce)
 type: entity
 category: salesforce-cloud
 tags: [commerce-cloud, sfcc, sfra, b2c-commerce, b2b-commerce, ecommerce, storefront]
-sources: 3
+sources: 4
 last_updated: 2026-04-21
 ---
 
@@ -20,13 +20,23 @@ Salesforce's ecommerce platform in two variants: **B2C Commerce** (formerly Dema
 
 ## Key Capabilities
 - **SFRA (Storefront Reference Architecture)**: B2C Commerce cartridge-based storefront framework; customized via cartridges (controllers, templates, models)
-- **Order Management**: full OMS capability including order lifecycle, fulfillment, returns, exchanges
+- **Composable Storefront (PWA Kit)**: headless React-based storefront; LWR-compatible; performance-optimized (30% lower LCP, 60% lower TBT via deferred scripts and partial hydration); GA completeness improvements Q1 2026
+- **Order Management**: full OMS capability including order lifecycle, fulfillment, returns, exchanges; native Salesforce OMS integration coming Q1 2026
 - **Product Catalog**: multi-locale, multi-currency product catalog with categories, attributes, pricing
 - **Promotions & Campaigns**: promotion engine, discount codes, tiered pricing
 - **B2C → Service Cloud Connector**: syncs Commerce orders to Service Cloud for agent context; orders appear on Contact/Account record
 - **B2C → Marketing Cloud Connector**: syncs catalog/order/customer data to MC data extensions; hooks for post-purchase journey triggers
 - **Salesforce Identity Integration**: OAuth 2.0 federation to Salesforce Identity for SSO; stub profile creation on first login
 - **Einstein Recommendations**: ML-based product recommendation engine embedded in storefronts
+- **Native Intelligent Search** (roadmap): semantic + context-aware search eliminating dependency on 3P tools (Algolia, Coveo); Contextual Search Pilot Q3/25, GA Q2 2026
+- **BYO Payments**: bring your own payment gateway without added fees; native Adyen integration GA Q1 2026
+- **Zero Copy Access to Data Cloud** (roadmap): query Commerce data in Data Cloud without copying it; reduces storage costs; aligns with Data 360 zero-copy pattern
+- **Unified Consent** (roadmap): common consent model across Commerce and Marketing channels
+- **Commerce & Marketing Journeys** (roadmap): OOTB two-way messaging templates (WhatsApp/SMS/email) for abandoned cart, back-in-stock, price drop, etc.; supersedes manual Winter '22 connector setup
+- **AI Shopping Platform Discovery** (Q4 2025–Q1 2026): catalog indexed for ChatGPT, Perplexity, and other AI platforms; in-line checkout + attribution analytics
+- **Social Commerce**: Meta (Instagram/Facebook Shops + ad attribution); TikTok Shop native integration (GA Q1 2026)
+- **MCP developer tools** (preview): Composable Storefront entering MCP ecosystem — agents can interface with Commerce via Model Context Protocol
+- **Visual Experience Editor** (roadmap H1 2026): Page Designer evolution; API-first, frontend-agnostic, "agentic ready" content management
 - **B2B Commerce (native)**: built on Salesforce platform (Account/Contract/Order objects); account-level buying, negotiated pricing, approval workflows
 
 ## Licensing / Pricing
@@ -44,10 +54,11 @@ Salesforce's ecommerce platform in two variants: **B2C Commerce** (formerly Dema
 
 ## Weaknesses / Gaps
 - **B2C Commerce is NOT on Salesforce platform**: different infrastructure, different data model, different security model — cross-cloud integration always involves API/connector boundary
-- SFTP data feeds (for Marketing Cloud) are batch — not real-time; delays in transactional email triggers
+- SFTP data feeds (for Marketing Cloud) are batch — not real-time; delays in transactional email triggers (being superseded by Commerce & Marketing Journeys roadmap item)
 - Native email capabilities are limited — Marketing Cloud replacement is a standard implementation pattern
 - SFRA customization can become complex at scale — cartridge conflicts, override chains, version management
 - B2B Commerce (native) lacks some capabilities that B2C Commerce has at scale (product catalog depth, high-volume catalog performance)
+- Roadmap capabilities (Native Intelligent Search, Zero Copy, Composable Storefront completeness) are not yet fully GA — plan timelines conservatively
 
 ## Known Gotchas
 - **Don't sync profiles to Commerce Cloud**: Experience Cloud is the profile SoR; Commerce Cloud stub profile should link to Salesforce Contact ID, not duplicate profile data
@@ -57,11 +68,14 @@ Salesforce's ecommerce platform in two variants: **B2C Commerce** (formerly Dema
 - **Winter '22 solution kits**: cross-cloud connector patterns documented in Winter '22 kits are foundational but predate Data 360 — some Heroku aggregation patterns are now replaceable with Data Cloud DMOs
 
 ## Contradictions / Open Questions
-- How does Data 360 activation (Real-Time Data Actions) replace or complement the SFTP → Marketing Cloud pattern for order-triggered emails?
-- SFCC Roadmap PDF is unreadable (image-based) — product direction for Commerce Cloud is not covered in current sources
+- **Zero Copy + SFTP pattern**: when Zero Copy Access to Data Cloud GAs, the SFTP-based MC data feed pattern becomes legacy — but transition timing and connector deprecation path unclear
+- **"Guided Shopping Agent"**: roadmap references a guided shopping agent built on Contextual Search — is this Agentforce? A new Commerce-specific agent product?
+- **MCP developer tools**: described as "preview" — what Commerce APIs are exposed via MCP? Full Commerce API surface or subset?
+- **Unified Consent**: roadmap says "capture consent in Commerce, respect across channels" — how does this interact with the existing principle that consent lives in CRM/Sales Cloud?
 - B2B Commerce vs. CPQ for complex configure-price-quote scenarios in B2B context — architectural boundary not documented
 
 ## Sources
 - [[cross-cloud-identity-solution-kit]] — Commerce Cloud as shopping data SoR, stub profile pattern, Salesforce Identity federation
 - [[cross-cloud-data-models-solution-kit]] — SoR ownership model, B2C connectors (Service Cloud, Marketing Cloud), Contact Record ID as primary key
 - [[transactional-email-solution-kit]] — SFTP data feed pattern, B2C → MC Connector hooks, triggered send design for transactional email
+- [[sfcc-roadmap]] — Full roadmap: Native Intelligent Search, Zero Copy, BYO Payments, Composable Storefront completeness, MCP tools, AI Shopping Platform discovery, social commerce

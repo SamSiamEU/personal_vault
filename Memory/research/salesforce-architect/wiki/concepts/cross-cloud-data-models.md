@@ -3,7 +3,7 @@ name: Cross-Cloud Data Models
 type: concept
 category: architecture-pattern
 tags: [cross-cloud, data-models, systems-of-record, commerce-cloud, marketing-cloud, service-cloud, data-ownership]
-sources: 2
+sources: 3
 last_updated: 2026-04-21
 ---
 
@@ -43,6 +43,13 @@ The framework for assigning clear data ownership ("systems of record") across mu
 - Ingests data from all SoR clouds → unifies into DMOs → resolves identity → enables segmentation and AI grounding
 - Does NOT replace SoR ownership — transactional writes still go to the authoritative cloud
 - Data 360 is read/analytics layer; SoR clouds are write/operational layer
+- **Zero Copy Access from Commerce Cloud** (roadmap, GA ~Q2-Q3 2026): query Commerce data in Data Cloud without physically copying it — eliminates storage duplication cost; Commerce remains the write SoR, Data Cloud queries it in place
+
+### Consent Model Evolution (Roadmap)
+- **Unified Consent** (SFCC roadmap): Commerce Cloud will capture consent natively and respect it across all channels with a "common consent model"
+- **Current best practice**: consent lives in CRM (Sales/Service Cloud); MC suppression lists are operational enforcement
+- **Tension**: Unified Consent suggests Commerce Cloud may become a consent capture point — architectural question: does CRM remain the authoritative SoR for consent, or does a shared consent service emerge?
+- Until GA, maintain existing pattern: CRM as consent SoR
 
 ### Heroku as Aggregation Layer (Legacy Pattern)
 - Pre-Data 360: Heroku was used to aggregate data from multiple clouds into a unified 360° profile API
@@ -70,3 +77,4 @@ The SoR ownership framework is the right starting point for any multi-cloud arch
 ## Sources
 - [[cross-cloud-data-models-solution-kit]] — Full SoR framework, connector patterns, Marketing Cloud Connect, Heroku aggregation layer
 - [[transactional-email-solution-kit]] — SFTP data feed from Commerce → MC as concrete implementation of the Commerce Cloud SoR feeding MC
+- [[sfcc-roadmap]] — Zero Copy Access (Commerce → Data Cloud), Unified Consent, Commerce & Marketing Journeys; updates Winter '22 patterns

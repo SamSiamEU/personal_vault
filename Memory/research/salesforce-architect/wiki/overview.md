@@ -80,7 +80,14 @@ The platform is transitioning from _application-centric_ (apps own data and logi
 
 **Starting points for client work**: Always assign SoR ownership per cloud before designing integrations. Consent lives in CRM (Sales/Service Cloud). Data 360 is the analytics/AI layer above all SoRs — it reads from them, never replaces them. The Heroku aggregation pattern is dead for new builds.
 
-**Gaps**: Solution kits are Winter '22 (2021) — test against current connector versions and Data 360 availability. No B2B Commerce-specific cross-cloud patterns. SFCC Roadmap unreadable (image-based PDF, needs OCR).
+**SFCC Roadmap updates the picture** (Q4 2025–H1 2026):
+- **Zero Copy Commerce → Data Cloud**: Commerce data queryable in Data Cloud without copying — completes the zero-copy story across all Salesforce clouds. Eliminates the need for SFTP data feeds for analytics use cases.
+- **Native Intelligent Search** (GA Q2 2026): semantic + context-aware search ends the 3P search tool debate. For new implementations, defer Algolia/Coveo investment.
+- **Product Discovery in AI Platforms** (Q4 2025–Q1 2026): Commerce catalogs indexed for ChatGPT, Perplexity et al. Commerce Cloud entering the agentic ecosystem.
+- **MCP developer tools for Composable Storefront** (preview): Commerce joining the same MCP protocol layer as MuleSoft and Agentforce.
+- **Unified Consent** (roadmap): Commerce will capture consent natively — **watch this**: tensions with CRM-as-consent-SoR principle. Do not change consent architecture until GA details are clear.
+
+**Gaps**: Winter '22 solution kits are foundational but pre-Data 360 — validate connector patterns against current stack. No B2B Commerce-specific cross-cloud patterns.
 
 ### Industry Clouds
 **Not yet covered** — no sources ingested on FSC, Health Cloud, Manufacturing Cloud, Nonprofit.
@@ -99,6 +106,10 @@ The platform is transitioning from _application-centric_ (apps own data and logi
 
 5. **Data Cloud One**: How does multi-org federation handle conflicting DMO schemas? What's the governance model when two orgs define "Customer" differently?
 
+6. **Unified Consent (SFCC roadmap)**: The SFCC roadmap says Commerce Cloud will have a "common consent model" across Commerce and Marketing. Does this create a new consent SoR, a consent sync mechanism, or just enforced propagation? Does CRM remain the GDPR-authoritative consent record?
+
+7. **Guided Shopping Agent**: The SFCC roadmap references a "guided shopping agent" powered by the new Contextual Search. Is this an Agentforce-based product? A Commerce-embedded agent? New product name?
+
 ---
 
 ## Where Knowledge Is Thin
@@ -111,7 +122,7 @@ The platform is transitioning from _application-centric_ (apps own data and logi
 | Field Service Lightning | Not started | No sources yet |
 | Marketing Cloud Engage | Covered | AMPScript/SSJS patterns; strategic architecture still thin |
 | Commerce Cloud (SFCC) | Covered | Winter '22 cross-cloud patterns; SFCC roadmap needs OCR |
-| SFCC Roadmap PDF | Unread | Image-based PDF; requires OCR: `brew install tesseract` |
+| SFCC Roadmap PDF | Covered | OCR'd via tesseract; full 13-page roadmap ingested |
 | Autonomous agent patterns | Partial | agentic-patterns-agentforce only read to line 400 |
 | Real-Time Data Actions (Data 360) | Partial | Integration patterns guide only read 100 lines |
 | Agentforce pricing/licensing | Thin | Consumption-based; Digital Wallet DLO architecture known; per-unit rates unclear |

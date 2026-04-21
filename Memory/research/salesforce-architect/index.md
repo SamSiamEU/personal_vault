@@ -44,7 +44,7 @@
 | [[transactional-email-solution-kit]] | Commerce Cloud → SFTP → Marketing Cloud transactional email; Email Studio replacing SFCC native email | 2026-04-21 |
 | [[digital-wallet-sdo-solution-kit]] | Digital Wallet in demo orgs; TenantEnrichedUsageEvent DLO; consumption tracking for Agentforce and Data 360 | 2026-04-21 |
 | [[marketing-cloud-engage-tips]] | AMPScript/SSJS scripting patterns; TreatAsContent bridge; error handling template for MC Email Studio | 2026-04-21 |
-| [[sfcc-roadmap]] | SFCC Roadmap PDF — image-based, no extractable text; pending OCR | 2026-04-21 |
+| [[sfcc-roadmap]] | SFCC B2C Commerce roadmap: Native Intelligent Search, Zero Copy to Data Cloud, Composable Storefront, MCP tools, AI Shopping Platform discovery, BYO Payments | 2026-04-21 |
 
 ---
 

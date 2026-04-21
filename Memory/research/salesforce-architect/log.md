@@ -107,3 +107,33 @@
 - All Winter '22 solution kits partially read (first 150-200 lines); detailed configuration guides in remainder
 - Partial reads from prior session: Agentic Patterns (offset 400+), Classic Integration Patterns (offset 200+), Salesforce Platform Transformed (offset 150+), Data 360 Integration Patterns (full)
 - overview.md updated to reflect cross-cloud coverage additions
+
+## [2026-04-21] ingest | SFCC Roadmap Items (OCR re-ingest)
+
+**Source type**: External reference (Salesforce B2C Commerce Cloud product roadmap)
+**Unblock**: tesseract OCR installed; PDF converted to PNG via `pdftoppm -r 200 -png`, then OCR'd per page; 13 pages extracted
+
+**Files processed**: `SFCC Roadmap items.pdf` — full 13-page read via tesseract OCR
+
+**Key content**: B2C Commerce roadmap Q4 2025 – H1 2026:
+- Native Intelligent Search (semantic + context-aware; GA Q2 2026) — displaces 3P search tools
+- Zero Copy Access Commerce → Data Cloud (GA ~Q2-Q3 2026) — eliminates SFTP/storage duplication
+- Unified Consent across Commerce + Marketing (roadmap) — challenges CRM-as-consent-SoR principle
+- Commerce & Marketing Journeys (OOTB WhatsApp/SMS/email templates for commerce flows)
+- Composable Storefront completeness + MCP developer tools (preview)
+- Product Discovery in AI Shopping Platforms (ChatGPT et al.) — Q4 2025/Q1 2026
+- BYO Payments + native Adyen integration (GA Q1 2026)
+- TikTok Shop native integration (GA Q1 2026)
+- PCI 4.0 + eCDN Unified Shield threat protection (GA Nov 2025)
+
+**Pages updated**:
+- [[sfcc-roadmap]] — full source page replacing placeholder
+- [[commerce-cloud]] — major capabilities update (Native Search, Zero Copy, MCP, AI discovery, social commerce, Composable Storefront); new open questions
+- [[cross-cloud-data-models]] — Zero Copy section, Unified Consent evolution and tension with CRM-as-consent-SoR principle; sfcc-roadmap added as source
+
+**Synthesis note**: The SFCC roadmap reveals Commerce Cloud is rapidly becoming AI-native. Two most architecturally significant items: (1) Zero Copy Access — Commerce data queryable in Data Cloud without copying, completing the zero-copy story across all clouds; (2) Product Discovery in AI Platforms — Commerce catalogs become agent-discoverable, making SFCC part of the agentic enterprise fabric. MCP developer tools (preview) signal Commerce joining the same protocol layer as MuleSoft and Agentforce. The Unified Consent item introduces tension with existing guidance — monitor for GA details before updating consent architecture recommendations.
+
+**Pending**:
+- Partial reads: Agentic Patterns (offset 400+), Classic Integration Patterns (offset 200+), Salesforce Platform Transformed (offset 150+), Data 360 Integration Patterns (full)
+- Winter '22 solution kits: detailed config sections not yet read
+- overview.md: update Cross-Cloud section to add SFCC roadmap insights (Zero Copy, Native Search, AI discovery)
