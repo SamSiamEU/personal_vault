@@ -36,7 +36,15 @@
 | [[salesforce-integration-patterns-classic]] | 6 classic integration patterns, selection matrix (intent × timing), middleware terminology | 2026-04-21 |
 | [[leveraging-mulesoft-informatica]] | MuleSoft + Informatica "Better Together": API connectivity vs. MDM/data governance separation | 2026-04-21 |
 | [[salesforce-platform-transformed-tomorrow]] | Platform evolution, 6 architectural principles, 10 layers, Hyperforce deep-dive, FinOps | 2026-04-21 |
-| [[pdf-solution-kits]] | 8 unread PDFs/DOCX: Agentforce implementation, SFCC roadmap, cross-cloud identity/data models, solution kits | 2026-04-21 |
+| [[pdf-solution-kits]] | Placeholder replaced — individual source pages created per document below | 2026-04-21 |
+| [[agentforce-implementation-customer]] | Customer-facing ADLC guide with Makana Medical Devices worked example; Ideate/Build/Test/Deploy/Monitor stages | 2026-04-21 |
+| [[cross-cloud-identity-solution-kit]] | Cross-cloud identity federation: Experience Cloud + Commerce Cloud via Salesforce Identity; don't sync, federate | 2026-04-21 |
+| [[cross-cloud-data-models-solution-kit]] | Systems of record per cloud (Winter '22); Contact Record ID as primary key; B2C connectors, Marketing Cloud Connect | 2026-04-21 |
+| [[conversational-campaigns-whatsapp-solution-kit]] | SMS→WhatsApp campaign flow; Einstein Bots; 24-hour session window; Digital Engagement SKU requirements | 2026-04-21 |
+| [[transactional-email-solution-kit]] | Commerce Cloud → SFTP → Marketing Cloud transactional email; Email Studio replacing SFCC native email | 2026-04-21 |
+| [[digital-wallet-sdo-solution-kit]] | Digital Wallet in demo orgs; TenantEnrichedUsageEvent DLO; consumption tracking for Agentforce and Data 360 | 2026-04-21 |
+| [[marketing-cloud-engage-tips]] | AMPScript/SSJS scripting patterns; TreatAsContent bridge; error handling template for MC Email Studio | 2026-04-21 |
+| [[sfcc-roadmap]] | SFCC Roadmap PDF — image-based, no extractable text; pending OCR | 2026-04-21 |
 
 ---
 
@@ -48,6 +56,9 @@
 | [[mulesoft]] | Salesforce integration platform: API-led connectivity, Agent Fabric, CloudHub 2.0, Flex Gateway | 2026-04-21 |
 | [[data-360]] | Salesforce data platform: lakehouse, DMOs, identity resolution, segmentation, clean rooms, ABAC | 2026-04-21 |
 | [[salesforce-platform]] | Core Salesforce platform: multitenant/metadata-driven, Hyperforce, Apex, sharing model | 2026-04-21 |
+| [[marketing-cloud]] | Marketing automation: Email Studio, Journey Builder, AMPScript/SSJS, Marketing Cloud Connect, cross-cloud engagement | 2026-04-21 |
+| [[experience-cloud]] | Customer-facing portal/community platform; identity hub in cross-cloud B2C architectures; profile SoR | 2026-04-21 |
+| [[commerce-cloud]] | B2C/B2B ecommerce platform (SFCC/SFRA); shopping data SoR; connector-based cross-cloud integration | 2026-04-21 |
 
 ---
 
@@ -66,6 +77,8 @@
 | [[data-clean-rooms]] | Zero-copy clean room architecture, PETs, Salesforce Data 360 implementation, cross-industry use cases | 2026-04-21 |
 | [[hyperforce]] | Salesforce cloud infrastructure: Instances/Cells/Supercells, zero-trust, Operating Zones, FinOps | 2026-04-21 |
 | [[sharing-model]] | Salesforce sharing model: OWD → role hierarchy → sharing rules → teams → Apex sharing | 2026-04-21 |
+| [[cross-cloud-identity]] | Federation pattern: Salesforce Identity as IdP, Contact Record ID as primary key, don't-sync-federate principle | 2026-04-21 |
+| [[cross-cloud-data-models]] | SoR ownership by cloud (CRM/MC/Commerce), primary key architecture, connector accelerators, Data 360 as analytics layer | 2026-04-21 |
 
 ---
 

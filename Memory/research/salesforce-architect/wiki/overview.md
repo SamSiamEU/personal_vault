@@ -2,7 +2,7 @@
 
 > Master synthesis. The evolving answer to: *"What do I know about Salesforce architecture, and where does my own practice stand?"*
 > Not an index — a living memo. Updated when new ingests meaningfully shift the picture.
-> Last updated: 2026-04-21 (post batch ingest of 18 raw sources)
+> Last updated: 2026-04-21 (post full ingest of all 27 raw sources)
 
 ---
 
@@ -70,6 +70,18 @@ The platform is transitioning from _application-centric_ (apps own data and logi
 
 **Gaps**: AppSec/code scanning, org security patterns, compliance frameworks in practice
 
+### Cross-Cloud Architecture (B2C)
+**Covered** (Winter '22 solution kits — foundational patterns):
+- [[cross-cloud-identity]] — Salesforce Identity as IdP; Experience Cloud as profile SoR; Commerce Cloud as shopping SoR; don't-sync-federate principle; Contact Record ID as universal primary key
+- [[cross-cloud-data-models]] — SoR ownership by cloud; B2C connector accelerators; Marketing Cloud Connect; Data 360 as analytics overlay
+- [[commerce-cloud]] — B2C/B2B Commerce (SFCC/SFRA); shopping data SoR; SFTP connector pattern
+- [[marketing-cloud]] — Email Studio, Journey Builder, AMPScript/SSJS; Marketing Cloud Connect; cross-cloud engagement execution layer
+- [[experience-cloud]] — Portal platform; identity hub; customer profile SoR in B2C architecture
+
+**Starting points for client work**: Always assign SoR ownership per cloud before designing integrations. Consent lives in CRM (Sales/Service Cloud). Data 360 is the analytics/AI layer above all SoRs — it reads from them, never replaces them. The Heroku aggregation pattern is dead for new builds.
+
+**Gaps**: Solution kits are Winter '22 (2021) — test against current connector versions and Data 360 availability. No B2B Commerce-specific cross-cloud patterns. SFCC Roadmap unreadable (image-based PDF, needs OCR).
+
 ### Industry Clouds
 **Not yet covered** — no sources ingested on FSC, Health Cloud, Manufacturing Cloud, Nonprofit.
 
@@ -97,9 +109,11 @@ The platform is transitioning from _application-centric_ (apps own data and logi
 | Industry Clouds | Not started | FSC, Health, Manufacturing, Nonprofit |
 | CPQ & Revenue Cloud | Not started | No sources yet |
 | Field Service Lightning | Not started | No sources yet |
-| Marketing Cloud Engage | Partial | DOCX unreadable; see [[pdf-solution-kits]] |
-| Commerce Cloud (SFCC) | Partial | PDF unreadable; see [[pdf-solution-kits]] |
-| PDF solution kits (8 files) | Unread | Install poppler-utils: `brew install poppler` |
+| Marketing Cloud Engage | Covered | AMPScript/SSJS patterns; strategic architecture still thin |
+| Commerce Cloud (SFCC) | Covered | Winter '22 cross-cloud patterns; SFCC roadmap needs OCR |
+| SFCC Roadmap PDF | Unread | Image-based PDF; requires OCR: `brew install tesseract` |
 | Autonomous agent patterns | Partial | agentic-patterns-agentforce only read to line 400 |
 | Real-Time Data Actions (Data 360) | Partial | Integration patterns guide only read 100 lines |
-| Agentforce pricing/licensing | Thin | Consumption-based model confirmed; rates unclear |
+| Agentforce pricing/licensing | Thin | Consumption-based; Digital Wallet DLO architecture known; per-unit rates unclear |
+| Cross-cloud (B2B Commerce) | Thin | Winter '22 kits cover B2C; B2B account-based patterns not covered |
+| Marketing Cloud strategic architecture | Thin | Scripting patterns covered; MCOPS/platform evolution not covered |

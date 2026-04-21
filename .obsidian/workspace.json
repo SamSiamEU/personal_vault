@@ -11,14 +11,10 @@
             "id": "3e9b301782f14329",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Memory/research/salesforce-architect/raw/End-User Identity Propagation in Agents.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "End-User Identity Propagation in Agents"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Memory/research/salesforce-architect/raw/End-User Identity Propagation in Agents.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for End-User Identity Propagation in Agents"
+              "title": "Backlinks"
             }
           },
           {
@@ -113,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Memory/research/salesforce-architect/raw/End-User Identity Propagation in Agents.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from End-User Identity Propagation in Agents"
+              "title": "Outgoing links"
             }
           },
           {
@@ -156,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Memory/research/salesforce-architect/raw/End-User Identity Propagation in Agents.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of End-User Identity Propagation in Agents"
+              "title": "Outline"
             }
           }
         ]
@@ -184,8 +177,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f60b14ee5c7126db",
+  "active": "3e9b301782f14329",
   "lastOpenFiles": [
+    "Memory/research/salesforce-architect/wiki/concepts/cross-cloud-data-models.md",
+    "Memory/research/salesforce-architect/wiki/concepts/cross-cloud-identity.md",
+    "Memory/research/salesforce-architect/wiki/entities/commerce-cloud.md",
+    "Memory/research/salesforce-architect/wiki/entities/experience-cloud.md",
+    "Memory/research/salesforce-architect/wiki/entities/marketing-cloud.md",
+    "Memory/research/salesforce-architect/wiki/sources/sfcc-roadmap.md",
+    "Memory/research/salesforce-architect/wiki/sources/marketing-cloud-engage-tips.md",
+    "Memory/research/salesforce-architect/raw/End-User Identity Propagation in Agents.md",
+    "Memory/research/salesforce-architect/wiki/sources/digital-wallet-sdo-solution-kit.md",
     "Memory/research/salesforce-architect/wiki/sources/transactional-email-solution-kit.md",
     "Memory/research/salesforce-architect/wiki/sources/conversational-campaigns-whatsapp-solution-kit.md",
     "Memory/research/salesforce-architect/wiki/sources/cross-cloud-data-models-solution-kit.md",
@@ -203,15 +205,6 @@
     "Memory/research/salesforce-architect/wiki/sources/async-processing-lightning-platform.md",
     "Memory/research/salesforce-architect/wiki/sources/agentic-enterprise-it-architecture.md",
     "Memory/research/salesforce-architect/wiki/sources/data-360-security-architecture.md",
-    "Memory/research/salesforce-architect/wiki/sources/data-360-architecture.md",
-    "Memory/research/salesforce-architect/wiki/sources/agent-development-lifecycle.md",
-    "Memory/research/salesforce-architect/wiki/sources/agentic-patterns-agentforce.md",
-    "Memory/research/salesforce-architect/wiki/sources/end-user-identity-propagation-agents.md",
-    "Memory/research/salesforce-architect/wiki/sources/mulesoft-agent-fabric-deep-dive.md",
-    "Memory/research/salesforce-architect/wiki/sources/enterprise-agentic-architecture-design-patterns.md",
-    "Memory/research/salesforce-architect/wiki/sources/architecting-agentic-enterprise-mulesoft.md",
-    "Memory/research/salesforce-architect/wiki/concepts/sharing-model.md",
-    "Memory/research/salesforce-architect/wiki/concepts/hyperforce.md",
     "Memory/research/salesforce-architect/raw/seamless_cross_cloud_identity_solution_kit.pdf",
     "Memory/research/salesforce-architect/raw/Solution Kit - Digital Wallet in SDO.pdf",
     "Memory/research/salesforce-architect/raw/agentforce_implementation_customer.pdf",
