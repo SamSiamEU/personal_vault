@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Memory/research/salesforce-architect/raw/Data 360 Architecture  Data 360 and Integration.md",
+                "file": "Memory/research/salesforce-architect/raw/The Agent Development Lifecycle From Conception to Production.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Data 360 Architecture  Data 360 and Integration"
+              "title": "The Agent Development Lifecycle From Conception to Production"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Memory/research/salesforce-architect/raw/Data 360 Architecture  Data 360 and Integration.md",
+                "file": "Memory/research/salesforce-architect/raw/The Agent Development Lifecycle From Conception to Production.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Data 360 Architecture  Data 360 and Integration"
+              "title": "Backlinks for The Agent Development Lifecycle From Conception to Production"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Memory/research/salesforce-architect/raw/Data 360 Architecture  Data 360 and Integration.md",
+                "file": "Memory/research/salesforce-architect/raw/The Agent Development Lifecycle From Conception to Production.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Data 360 Architecture  Data 360 and Integration"
+              "title": "Outgoing links from The Agent Development Lifecycle From Conception to Production"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Memory/research/salesforce-architect/raw/Data 360 Architecture  Data 360 and Integration.md",
+                "file": "Memory/research/salesforce-architect/raw/The Agent Development Lifecycle From Conception to Production.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Data 360 Architecture  Data 360 and Integration"
+              "title": "Outline of The Agent Development Lifecycle From Conception to Production"
             }
           }
         ]
@@ -186,8 +186,17 @@
   },
   "active": "3e9b301782f14329",
   "lastOpenFiles": [
-    "Memory/research/salesforce-architect/raw/Asynchronous Processing on the Lightning Platform  Get Started with Fundamentals.md",
+    "Memory/research/salesforce-architect/raw/Enterprise Agentic Architecture and Design Patterns.md",
+    "Memory/research/salesforce-architect/raw/The Agent Development Lifecycle From Conception to Production.md",
+    "Memory/research/salesforce-architect/raw/Agentic Patterns and Implementation with Agentforce.md",
+    "Memory/research/salesforce-architect/raw/Leveraging MuleSoft and Informatica  Data 360 and Integration.md",
+    "Memory/research/salesforce-architect/raw/CloudHub 2.0 High Availability and Disaster Recovery  Data 360 and Integration.md",
+    "Memory/research/salesforce-architect/raw/Data 360 Clean Rooms  Data 360 and Integration.md",
+    "Memory/research/salesforce-architect/raw/Data 360 Integration Patterns  Data 360 and Integration.md",
+    "Memory/research/salesforce-architect/raw/Data 360 Security Architecture  Data 360 and Integration.md",
+    "Memory/research/salesforce-architect/raw/Integration Patterns  Data 360 and Integration.md",
     "Memory/research/salesforce-architect/raw/Data 360 Architecture  Data 360 and Integration.md",
+    "Memory/research/salesforce-architect/raw/Asynchronous Processing on the Lightning Platform  Get Started with Fundamentals.md",
     "Memory/research/salesforce-architect/raw/Platform Sharing Architecture  Get Started with Fundamentals.md",
     "Memory/research/salesforce-architect/raw/Platform Multitenant Architecture  Get Started with Fundamentals.md",
     "Memory/research/salesforce-architect/raw/The Salesforce Platform - Transformed for Tomorrow  Get Started with Fundamentals.md",
@@ -212,15 +221,6 @@
     "Memory/research/cooking-baking/index.md",
     "Memory/research/business-strategy/index.md",
     "Memory/research/ai-claude/index.md",
-    "Memory/research/cooking-baking/CLAUDE.md",
-    "Memory/research/business-strategy/CLAUDE.md",
-    "Memory/research/ai-claude/CLAUDE.md",
-    "Memory/research/salesforce-architect/wiki/overview.md",
-    "Memory/research/salesforce-architect/log.md",
-    "Memory/research/salesforce-architect/index.md",
-    "Memory/research/salesforce-architect/CLAUDE.md",
-    "Memory/research/acqura-intel/wiki/concepts/impression-attribution.md",
-    "Memory/research/acqura-intel/wiki/concepts/incrementality-testing.md",
-    "Memory/research/acqura-intel/wiki/concepts/marketing-mix-modelling.md"
+    "Memory/research/cooking-baking/CLAUDE.md"
   ]
 }
