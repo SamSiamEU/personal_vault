@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Memory/research/acqura-intel/raw/How to Implement Facebook  Meta Conversions API (CAPI) Step-By-Step Guide 2026.md",
+                "file": "Memory/research/acqura-intel/raw/Meta Conversions API Complete Setup & Optimization Guide (2026).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "How to Implement Facebook  Meta Conversions API (CAPI) Step-By-Step Guide 2026"
+              "title": "Meta Conversions API Complete Setup & Optimization Guide (2026)"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Memory/research/acqura-intel/raw/How to Implement Facebook  Meta Conversions API (CAPI) Step-By-Step Guide 2026.md",
+                "file": "Memory/research/acqura-intel/raw/Meta Conversions API Complete Setup & Optimization Guide (2026).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for How to Implement Facebook  Meta Conversions API (CAPI) Step-By-Step Guide 2026"
+              "title": "Backlinks for Meta Conversions API Complete Setup & Optimization Guide (2026)"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Memory/research/acqura-intel/raw/How to Implement Facebook  Meta Conversions API (CAPI) Step-By-Step Guide 2026.md",
+                "file": "Memory/research/acqura-intel/raw/Meta Conversions API Complete Setup & Optimization Guide (2026).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from How to Implement Facebook  Meta Conversions API (CAPI) Step-By-Step Guide 2026"
+              "title": "Outgoing links from Meta Conversions API Complete Setup & Optimization Guide (2026)"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Memory/research/acqura-intel/raw/How to Implement Facebook  Meta Conversions API (CAPI) Step-By-Step Guide 2026.md",
+                "file": "Memory/research/acqura-intel/raw/Meta Conversions API Complete Setup & Optimization Guide (2026).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of How to Implement Facebook  Meta Conversions API (CAPI) Step-By-Step Guide 2026"
+              "title": "Outline of Meta Conversions API Complete Setup & Optimization Guide (2026)"
             }
           }
         ]
@@ -186,8 +186,10 @@
   },
   "active": "3e9b301782f14329",
   "lastOpenFiles": [
-    "Memory/research/acqura-intel/raw/Meta Content Library and API Data Dictionary.md",
+    "Memory/research/acqura-intel/raw/How to use the Meta ad library API to scrape ad data?.md",
+    "Memory/research/acqura-intel/raw/Meta Conversions API Complete Setup & Optimization Guide (2026).md",
     "Memory/research/acqura-intel/raw/How to Implement Facebook  Meta Conversions API (CAPI) Step-By-Step Guide 2026.md",
+    "Memory/research/acqura-intel/raw/Meta Content Library and API Data Dictionary.md",
     "Memory/research/acqura-intel/raw/How to use Facebook Graph API and extract data using Python!.md",
     "Memory/research/acqura-intel/raw/Meta Conversions API Setup Guide.md",
     "Memory/research/acqura-intel/raw/A Comprehensive Guide to Server-Side Tracking and the Meta Conversion API.md",
@@ -212,8 +214,6 @@
     "Memory/research/salesforce-architect/wiki/sources/cross-cloud-identity-solution-kit.md",
     "Memory/research/salesforce-architect/wiki/sources/agentforce-implementation-customer.md",
     "Memory/research/salesforce-architect/wiki/sources/pdf-solution-kits.md",
-    "Memory/research/salesforce-architect/wiki/sources/salesforce-platform-transformed-tomorrow.md",
-    "Memory/research/salesforce-architect/wiki/sources/leveraging-mulesoft-informatica.md",
     "Memory/research/salesforce-architect/raw/seamless_cross_cloud_identity_solution_kit.pdf",
     "Memory/research/salesforce-architect/raw/Solution Kit - Digital Wallet in SDO.pdf",
     "Memory/research/salesforce-architect/raw/agentforce_implementation_customer.pdf",
