@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Memory/research/acqura-intel/raw/Reducing RTO in D2C Businesses Challenges & Solutions.md",
+                "file": "Memory/research/acqura-intel/raw/Why Can’t D2C brands avoid COD? And how AI is fixing its biggest challenges.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Reducing RTO in D2C Businesses Challenges & Solutions"
+              "title": "Why Can’t D2C brands avoid COD? And how AI is fixing its biggest challenges"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Memory/research/acqura-intel/raw/Reducing RTO in D2C Businesses Challenges & Solutions.md",
+                "file": "Memory/research/acqura-intel/raw/Why Can’t D2C brands avoid COD? And how AI is fixing its biggest challenges.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Reducing RTO in D2C Businesses Challenges & Solutions"
+              "title": "Backlinks for Why Can’t D2C brands avoid COD? And how AI is fixing its biggest challenges"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Memory/research/acqura-intel/raw/Reducing RTO in D2C Businesses Challenges & Solutions.md",
+                "file": "Memory/research/acqura-intel/raw/Why Can’t D2C brands avoid COD? And how AI is fixing its biggest challenges.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Reducing RTO in D2C Businesses Challenges & Solutions"
+              "title": "Outgoing links from Why Can’t D2C brands avoid COD? And how AI is fixing its biggest challenges"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Memory/research/acqura-intel/raw/Reducing RTO in D2C Businesses Challenges & Solutions.md",
+                "file": "Memory/research/acqura-intel/raw/Why Can’t D2C brands avoid COD? And how AI is fixing its biggest challenges.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Reducing RTO in D2C Businesses Challenges & Solutions"
+              "title": "Outline of Why Can’t D2C brands avoid COD? And how AI is fixing its biggest challenges"
             }
           }
         ]
@@ -186,9 +186,10 @@
   },
   "active": "3e9b301782f14329",
   "lastOpenFiles": [
+    "Memory/research/acqura-intel/raw/Reducing RTO in D2C Businesses Challenges & Solutions.md",
+    "Memory/research/acqura-intel/raw/Why Can’t D2C brands avoid COD? And how AI is fixing its biggest challenges.md",
     "Memory/research/acqura-intel/wiki/entities/meta-platform.md",
     "Memory/research/acqura-intel/raw/Meta Conversions API Complete Setup & Optimization Guide (2026).md",
-    "Memory/research/acqura-intel/raw/Reducing RTO in D2C Businesses Challenges & Solutions.md",
     "Memory/research/acqura-intel/raw/How to use the Meta ad library API to scrape ad data?.md",
     "Memory/research/acqura-intel/raw/How to Implement Facebook  Meta Conversions API (CAPI) Step-By-Step Guide 2026.md",
     "Memory/research/acqura-intel/raw/Meta Content Library and API Data Dictionary.md",
@@ -213,7 +214,6 @@
     "Memory/research/salesforce-architect/wiki/sources/transactional-email-solution-kit.md",
     "Memory/research/salesforce-architect/wiki/sources/conversational-campaigns-whatsapp-solution-kit.md",
     "Memory/research/salesforce-architect/wiki/sources/cross-cloud-data-models-solution-kit.md",
-    "Memory/research/salesforce-architect/wiki/sources/cross-cloud-identity-solution-kit.md",
     "Memory/research/salesforce-architect/raw/seamless_cross_cloud_identity_solution_kit.pdf",
     "Memory/research/salesforce-architect/raw/Solution Kit - Digital Wallet in SDO.pdf",
     "Memory/research/salesforce-architect/raw/agentforce_implementation_customer.pdf",
