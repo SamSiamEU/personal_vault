@@ -61,3 +61,46 @@ Every brand on Braze, MoEngage, WebEngage in Indian D2C is a potential Tier 1 cl
 ---
 
 ## The Graduation Path
+
+Graduation is not a sales pitch — it is a natural consequence of what the intelligence layer reveals. Each tier creates the conditions for the next conversation.
+
+**Tier 1 → Tier 2**
+The Growth Pulse dashboard shows the client exactly where their lifecycle marketing is failing. Abandoned cart sequences are underperforming. Win-back campaigns don't exist. RTO-adjusted ROAS reveals which campaigns are generating low-intent buyers. The data makes the Tier 2 argument — Acqura does not have to. Trigger: 60–90 days of intelligence delivery, one clear lifecycle gap identified and quantified.
+
+**Tier 2 → Tier 3**
+The shared infrastructure ceiling becomes visible at scale. Multiple brands in the same MC Engage Corporate instance creates sendability constraints. Agentforce activation, MCI integration, or executive-level reporting requirements exceed what a shared environment can support cleanly. The client has already proven willingness to pay and trust in delivery. Trigger: >50k active contacts, Agentforce requirement, or dedicated compliance/data isolation need.
+
+**Direct Tier 3 entry**
+Enterprise clients or Eksido OSP graduates who already have the intelligence maturity and scale may bypass Tier 1 and 2 entirely. These are not cold sales — they come through the Eksido relationship or Dennis's Merkle network. Entry at Tier 3 without a warm relationship is unlikely.
+
+```
+[Tier 1] Analytics in a Box
+    €800–1,500/month · Any stack · 2–3 weeks
+         ↓  (intelligence reveals lifecycle gap)
+[Tier 2] Intelligence + Activation
+    €2,000–2,500/month · SFMC shared · 3–4 weeks
+         ↓  (scale, Agentforce, or isolation need)
+[Tier 3] Full Stack Dedicated
+    €4,000–8,000/month · Dedicated MC · enterprise
+```
+
+---
+
+## Connection To Three Horizon Model
+
+Tier 1 compresses the Three Horizon timeline significantly:
+- Horizon 3 (Acqura standalone) is no longer years away
+- Tier 1 can launch immediately to Indian D2C brands
+- No Salesforce dependency removes the biggest adoption barrier
+- Tier 1 clients self-select into Tier 2 and 3 naturally
+
+---
+
+## Open Questions
+
+- **Who closes Tier 1 first clients?** Dennis direct, Eksido India hire, or inbound?
+- **What is the Tier 1 lead generation strategy?** Content, referral, or outbound?
+- **What is the minimum viable Tier 1 delivery team?**
+- **How many Tier 2 clients needed before Tier 3 infrastructure pays for itself?**
+
+**Status:** Open — to be resolved in GTM planning session.
