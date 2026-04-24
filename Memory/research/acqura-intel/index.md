@@ -2,7 +2,7 @@
 
 > Content catalog for the acqura-intel wiki. Updated on every ingest.
 > To find relevant pages for a query, start here.
-> Last updated: 2026-04-22
+> Last updated: 2026-04-24
 
 ---
 
@@ -21,6 +21,9 @@
 | [[meta-content-library-data-dictionary]] | Meta's official Content Library API data dictionary: scope, field schema for Pages/Groups/Events/Posts | 2026-04-22 |
 | [[facebook-graph-api-python-basics]] | Dated (2017, v2.7) Python tutorial for Graph API events data extraction — low current relevance | 2026-04-22 |
 | [[d2c-rto-reduction-bnpl]] | India D2C Return to Origin article: COD dependency, 20-40% RTO rate, BNPL solutions, AI risk scoring | 2026-04-22 |
+| [[kaushik-see-think-do-care]] | STDC framework: 4 audience intent clusters (See/Think/Do/Care), LAQA concept, Content+Marketing+Measurement trifecta, per-cluster metrics | 2026-04-24 |
+| [[kaushik-digital-analytics-ecosystem]] | Analytics maturity model: 5 core elements, 10/90 rule, 3 output stages (data pukes→IABI), 3 execution phases with timelines | 2026-04-24 |
+| [[pharynx-d2c-cod-ai-challenges]] | COD in India D2C: inflated dashboard problem, reconciliation complexity, AI voice agents for COD management, COD-to-prepaid conversion strategy | 2026-04-24 |
 
 ---
 
@@ -47,7 +50,9 @@
 | [[impression-attribution]] | Attribution credit for ad views (not clicks); upper-funnel visibility; view-through limitations | 2026-04-20 |
 | [[meta-conversions-api]] | CAPI: server-side tracking for Meta ads; EMQ scoring; deduplication; fbclid; 4 setup methods; Acqura implications | 2026-04-22 |
 | [[meta-ad-library]] | Meta Ad Library for competitor research; API limited to EU + political ads; scraping tools for US | 2026-04-22 |
-| [[d2c-rto]] | Return to Origin in Indian D2C; COD dependency; BNPL as solution; RTO-adjusted ROAS as metric | 2026-04-22 |
+| [[see-think-do-care]] | STDC audience intent framework: See/Think/Do/Care clusters, LAQA, 97%-Do-bias, per-cluster metrics, trifecta requirement | 2026-04-24 |
+| [[analytics-maturity-model]] | Kaushik 3-phase maturity model: Data Capture→Reporting→Analysis; IABI output frame; 10/90 rule; client diagnostic tool | 2026-04-24 |
+| [[d2c-rto]] | Return to Origin in Indian D2C; COD dependency; inflated dashboard problem; AI voice agents; COD-to-prepaid strategy | 2026-04-24 |
 
 ---
 

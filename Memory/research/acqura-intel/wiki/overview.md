@@ -11,6 +11,8 @@ The paid media measurement stack is structurally broken at multiple layers — a
 
 **Acqura's opportunity sits above the measurement layer, but below it is a prerequisite.** Broken tracking (Pixel-only, low EMQ, missing fbclid capture) is the default state for SMB clients — it must be remediated before GTI can generate reliable cross-channel recommendations. The practical entry point: a tracking health audit (check EMQ scores, CAPI coverage, fbclid capture rate) establishes trust and creates a billable setup phase before intelligence work begins.
 
+Beyond tracking infrastructure, most clients have a deeper strategic failure: **they optimise entirely for "Do" intent audiences** (strong purchase intent) while ignoring "See" (awareness), "Think" (consideration), and "Care" (retention) audiences. The result is expensive competition over a thin slice of the market, while the much larger qualified audience pool is unreached. Acqura's GTI should diagnose this intent distribution gap and structure recommendations accordingly — each recommendation tagged to an intent cluster with cluster-appropriate success metrics. (See [[see-think-do-care]].)
+
 ---
 
 ## Landscape Clusters
@@ -18,7 +20,8 @@ The paid media measurement stack is structurally broken at multiple layers — a
 - **Attribution & measurement** — 2 sources (Apr 20). GA4 limitations well-mapped. Triangulation framework (MTA + MMM + incrementality) established as current best practice. [[ruler-analytics]] identified as competitor analogue.
 - **Meta tracking infrastructure** — 6 sources (Apr 22). CAPI coverage is now comprehensive: why it exists, how to implement, how to troubleshoot, 2026 state. [[meta-conversions-api]] is the synthesized concept page.
 - **Meta data access tools** — 2 sources (Apr 22). [[meta-ad-library]] (competitor research via API — EU/political only; US requires scraping); [[meta-content-library-data-dictionary]] (academic research tool, low ad relevance).
-- **D2C operational challenges** — 1 source (Apr 22). [[d2c-rto]] — India-specific Return to Origin problem; relevant only for Indian D2C clients.
+- **Analytics strategy frameworks** — 2 sources (Apr 24, Avinash Kaushik). [[see-think-do-care]] — audience intent cluster framework; 97% of marketing spend concentrated on Do intent; LAQA concept; per-cluster metrics. [[analytics-maturity-model]] — three-phase maturity model (Data Capture → Reporting → Analysis); IABI output framework (Insights → Actions → Business Impact); 10/90 rule (invest $90 in analysts, $10 in tools). Both directly inform how Acqura's GTI should be positioned and structured.
+- **D2C operational challenges** — 2 sources (Apr 22 + Apr 24). [[d2c-rto]] significantly deepened: inflated dashboard problem (COD dashboards overstate revenue), reconciliation complexity, AI voice agents for COD management, COD-to-prepaid conversion as strategic lever.
 - **Paid media platforms** — 0 deep sources. [[meta-platform]] entity created (from CAPI sources). Google, TikTok, programmatic not yet covered.
 - **Growth OS / Revenue Intelligence** — 0 sources. Highest priority gap.
 - **Audience & intent data** — 0 sources.
@@ -54,10 +57,14 @@ The paid media measurement stack is structurally broken at multiple layers — a
 - **Tracking health audit as entry point**: Before GTI work begins, run EMQ check + CAPI coverage audit for every client. Low EMQ (below 6) = wasted ad spend right now; fixing it is a quick win with measurable ROI. Establishes Acqura as technically credible before selling intelligence.
 - **CAPI is table stakes, not differentiator**: Don't compete here. Refer clients to Shopify/WooCommerce native integration (free) or Weld (Reverse-ETL for omni-channel). Acqura's value is above this layer.
 - **Broken tracking = distorted data = wrong GTI inputs**: RTO-adjusted ROAS (for Indian D2C), EMQ-normalized attribution, fbclid-to-CRM pipeline — Acqura should surface these data quality gaps in its diagnostic output.
+- **COD dashboard distortion** (Indian D2C clients): COD orders inflate conversion counts; only ~65% of "orders" become real revenue. Acqura's diagnostic should include a COD distortion check — RTO-adjusted ROAS by campaign and audience segment — before any GTI recommendation is made. (See [[d2c-rto]].)
 - **Clients arrive with a measurement spectrum**: broken UTM (no CAPI, no fbclid) → partial (GA4 only, no CAPI) → functional (CAPI live, EMQ 6+) → sophisticated (CAPI + fbclid + MTA + MMM). Acqura's GTI needs to work across this spectrum, diagnosing where each client is and what's needed before intelligence can be trusted.
+- **Clients also arrive on an analytics maturity spectrum**: Phase 1 (data capture only) → Phase 2 (reporting) → Phase 3 (analysis/IABI). GTI output format should match client maturity: audit-first for Phase 1, insight reports for Phase 2, full IABI recommendations for Phase 3. (See [[analytics-maturity-model]].)
+- **GTI output should be IABI-structured**: Insight (what the data says and why) → Action (specific recommendation) → Business Impact (quantified). This is the standard clients never receive — it is Acqura's differentiation vs. dashboards and reports.
+- **Most clients are Do-intent only**: all measurement and optimisation is concentrated on conversion-stage audiences. Acqura's GTI should diagnose the intent gap (what % of spend is See vs. Think vs. Do vs. Care) and recommend rebalancing where economics support it. (See [[see-think-do-care]].)
 - **First-party data is the moat**: CAPI, fbclid, email-at-checkout — the clients who capture this data with consent are future-proofed as privacy regulations tighten. Acqura should coach clients toward first-party data collection as a growth operating principle, not just a compliance measure.
-- **The measurement problem is being commoditised** (Google Meridian, Meta Robyn are open-source MMM). The intelligence-above-measurement layer is not.
+- **The measurement problem is being commoditised** (Google Meridian, Meta Robyn are open-source MMM). The intelligence-above-measurement layer is not. Acqura sells the 90 in the 10/90 rule — the analyst brain, not the tool.
 
 ---
 
-> Last updated: 2026-04-22 (11 sources ingested: 2 attribution, 6 CAPI/Meta tracking, 2 Meta data access, 1 D2C/RTO)
+> Last updated: 2026-04-24 (14 sources ingested: 2 attribution, 6 CAPI/Meta tracking, 2 Meta data access, 1 D2C/RTO, 2 analytics strategy, 1 D2C/COD)

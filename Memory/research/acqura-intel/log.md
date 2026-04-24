@@ -70,3 +70,30 @@
 - Domain: competitive landscape for paid media systems and growth OS platforms
 - Scope: entities (platforms, tools, competitors), concepts (strategies, frameworks, metrics), sources, analyses
 - Status: ready for first ingest
+
+## [2026-04-24] ingest | Batch Ingest — 3 new raw files (analytics strategy + COD/D2C)
+
+**Source type**: External references (Avinash Kaushik blog posts x2, Pharynx.ai vendor blog x1)
+**Dennis's framing**: First two files = strategic view on how to structure marketing analytics and get data to tell a story. Third file = market intelligence on COD challenges in India, important for Acqura Growth OS approach.
+
+**Files processed**:
+- `See, Think, Do, Care Winning Combo Content +Marketing +Measurement!.md` — Kaushik STDC framework extension; LAQA; trifecta requirement; per-cluster metrics
+- `The Complete Digital Analytics Ecosystem How To Win Big.md` — Kaushik analytics ecosystem model; 10/90 rule; IABI output framework; 3-phase maturity model
+- `Why Can't D2C brands avoid COD? And how AI is fixing its biggest challenges.md` — Pharynx.ai; inflated dashboard problem; COD reconciliation complexity; AI voice agents; COD-to-prepaid conversion
+
+**Source pages created (3)**:
+- [[kaushik-see-think-do-care]]
+- [[kaushik-digital-analytics-ecosystem]]
+- [[pharynx-d2c-cod-ai-challenges]]
+
+**Concept pages created (2)**:
+- [[see-think-do-care]] — full STDC framework: 4 intent clusters, LAQA, trifecta, per-cluster metrics table, Acqura angle (intent gap diagnosis, GTI output tagged by cluster, LTV as Care metric)
+- [[analytics-maturity-model]] — 3-phase maturity model, IABI output frame, 10/90 rule, client diagnostic application, GTI positioning as the 90
+
+**Concept pages updated (2)**:
+- [[marketing-measurement-triangulation]] — IABI output frame added; STDC intent-cluster measurement alignment; cross-links to new concepts; sources count 1→3
+- [[d2c-rto]] — inflated dashboard problem (10,000 orders → 6,500 delivered); COD reconciliation complexity; traditional channel failures; AI voice agent approach; COD-to-prepaid conversion as strategic priority; sources count 1→2
+
+**Overview.md**: updated — new thesis paragraph on Do-intent bias; analytics strategy cluster added to landscape; D2C cluster updated; Acqura implications expanded (COD distortion check, analytics maturity spectrum, IABI GTI output, intent gap diagnosis, 10/90 rule positioning)
+
+**Synthesis note**: The Kaushik sources provide the strategic vocabulary for how Acqura should think about its GTI output: structured as IABI (not dashboards), tagged to intent cluster (not just conversion events), delivered to clients where they are on the maturity curve (Phase 1 gets an audit, Phase 3 gets full intelligence). The COD article deepens the data distortion picture — for Indian D2C clients, conversion metrics in ad platforms are fundamentally unreliable without RTO adjustment, and the inflated dashboard problem means clients are scaling against ghost revenue. Together: Acqura's diagnostic entry point should surface both tracking gaps (CAPI/EMQ) and economic distortions (RTO-adjusted ROAS, COD share of conversions) before GTI recommendations are made.

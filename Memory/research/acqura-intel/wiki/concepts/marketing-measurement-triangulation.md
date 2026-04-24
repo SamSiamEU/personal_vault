@@ -3,8 +3,8 @@ name: Marketing Measurement Triangulation
 type: concept
 category: framework
 tags: [measurement, attribution, mmm, incrementality, mta, framework, paid-media]
-sources: 1
-last_updated: 2026-04-20
+sources: 3
+last_updated: 2026-04-24
 ---
 
 # Marketing Measurement Triangulation
@@ -68,6 +68,10 @@ MTA tells you *what* happened in the click path. MMM tells you *how much* each c
 
 The triangulation framework solves the *measurement* problem. Acqura's Growth OS should solve the *so what* problem — what decisions do you make once you have the measurement right? GTI could function as the strategic intelligence layer on top of triangulated data: interpreting signals, recommending budget shifts, flagging diminishing returns before they hurt, and connecting measurement outputs to growth execution. Acqura is not a fourth measurement method — it's what you build on top of the three.
 
+**GTI output should be IABI-structured** (from [[analytics-maturity-model]]): Insight (what the data says and why) → Action (the specific recommendation) → Business Impact (quantified outcome). Most clients have never received this — they get data reports, not decisions. This is Acqura's differentiator.
+
+**STDC connection**: most clients measure only at the Do intent cluster — conversion rate, ROAS — and use those metrics to evaluate all campaigns regardless of intent. A triangulation recommendation for a See-stage awareness campaign judged by conversion rate will always look like a failure. GTI recommendations should be tagged to the [[see-think-do-care]] intent cluster they target, with cluster-appropriate success metrics.
+
 Open question: should Acqura integrate with triangulation-layer tools (Ruler, Northbeam) and ingest their outputs, or build its own simplified measurement layer for clients who don't yet have this sophistication?
 
 ## Contradictions / Open Questions
@@ -79,3 +83,5 @@ Open question: should Acqura integrate with triangulation-layer tools (Ruler, No
 ## Sources
 
 - [[ruler-facebook-ads-ga4-2026]] — primary source; introduced and explained the full framework
+- [[kaushik-see-think-do-care]] — STDC per-stage metrics; Do-intent bias diagnosis; trifecta argument
+- [[kaushik-digital-analytics-ecosystem]] — IABI output framework; analytics maturity phases; 10/90 rule

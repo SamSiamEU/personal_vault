@@ -2,7 +2,7 @@
 
 > Content catalog for the salesforce-architect wiki. Updated on every ingest.
 > To find relevant pages for a query, start here.
-> Last updated: 2026-04-21
+> Last updated: 2026-04-24
 
 ---
 
@@ -11,6 +11,8 @@
 | Page | Description | Date |
 |------|-------------|------|
 | [[gilead-marketing-intelligence-2026]] | Marketing Intelligence proposed solution for Gilead DTC pharma: SDM pipeline, MTA, HVA funnel (Awareness→PSP), Cross-Channel Segment Intelligence, Agentforce optimization | 2026-04-21 |
+| [[masan-media-cxm-growth-engine]] | Proprietary AI-powered Media + CXM intelligence platform for Masan Group (Vietnam): extends Retail Supreme across full ecosystem (WinX loyalty + paid media), three-layer Intelligence→Decision→Activation architecture, permanent moat framing | 2026-04-24 |
+| [[neom-cdp-rfp-2025]] | Merkle RFP response for NEOM CDP Implementation Partner: dedicated Data Cloud hub, multi-org + single MKTO org, BigQuery pre-processing for cost management, MuleSoft API layer, Spotify Agile Pod CoE model (squads/tribes/chapters/guilds) | 2026-04-24 |
 
 ---
 

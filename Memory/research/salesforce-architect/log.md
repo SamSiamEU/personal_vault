@@ -213,3 +213,35 @@ This distinction was not previously represented in the wiki. MC Growth/Advanced 
 - Partial reads: Agentic Patterns (offset 400+), Classic Integration Patterns (offset 200+), Salesforce Platform Transformed (offset 150+), Data 360 Integration Patterns (full)
 - Winter '22 solution kits: detailed config sections not yet read
 - overview.md: update Cross-Cloud section to add SFCC roadmap insights (Zero Copy, Native Search, AI discovery)
+
+## [2026-04-24] ingest | Masan Media + CXM Growth Engine — Own IP Solution Page
+
+**Source**: `raw/Masan_Media_CXM_Merkle_v3_1_DBB.pptx` — 5-slide solution pitch, April 2026; Dennis authored (DBB initials in filename)
+**Status**: Active — media pitch delivered, engagement ongoing
+
+**Key content captured**:
+- Extend existing Retail Supreme (retailer demand signals → GT budget optimisation) across full Masan ecosystem
+- Connect: Retail Supreme + WinX loyalty data + paid media signals → Masan AI platform (proprietary model, trained only on Masan data)
+- Three-layer architecture: Intelligence (AI model) → Decision (recommendations) → Activation (digital, CRM, in-store)
+- Structural change: co-located media planners + CXM leads under shared business-outcome KPIs
+- 90-day / 6-month / Year 3 roadmap with escalating intelligence compounding
+- Core moat argument: cross-category dataset (GT + WinCommerce + WinX + multi-brand) no Vietnam competitor can replicate
+
+**Pages created**: [[masan-media-cxm-growth-engine]]
+**Synthesis note**: The "extend don't replace" pattern (Retail Supreme as foundation) and the "built from the inside out on proprietary data" moat framing are the most reusable pitch elements from this document.
+
+## [2026-04-24] ingest | NEOM CDP RFP 2025 — Own IP Solution Page
+
+**Source**: `raw/WIP - Technical Proposal - NEOM CDP Implementation partner RFP - 28th January 2025 - Merkle response (2).pptx` — 135-slide RFP response, February 4 2025; Dennis as Principal Salesforce Data Cloud Leader / VP SF Solution Engineering
+**Status**: Deprecated — bid lost; NEOM investment programme curtailed
+
+**Key content captured**:
+- Architecture: dedicated Data Cloud org as hub + Data Spaces per sector; single MKTO org with BUs; BigQuery federated (zero-copy) as identity resolution pre-processing layer (cost management); MuleSoft API gateway; CI/CD pipeline for Data Cloud metadata
+- Delivery model: Spotify Agile Pod Model inside IAT framework — squads (Integration, Consent & Privacy, Content Optimisation) / tribes (Integration, Data Gov & Compliance, AI Marketing) / chapters (API Dev, Privacy, AI/ML) / guilds (Audience Creation, Content Personalisation)
+- CoE operates across three continuous streams: Strategy / Tech / Activation with feedback loops
+- 6-category CDP use case framework: data sources → data management → unified profiles → activation → intelligence → security/extensibility
+- Marketing use case framework: META → Acquire → Grow → Retain
+- Case studies cited: VodafoneZiggo (composable CDP, semantic layer, 6-use-case phased delivery) and Galderma (B2B + B2C dual-model, Snowflake + Data Cloud hybrid identity resolution)
+
+**Pages created**: [[neom-cdp-rfp-2025]]
+**Synthesis note**: The CoE/Pod delivery model (squads/tribes/chapters/guilds) is the primary reusable IP — directly applicable to any multi-sector or multi-brand CDP rollout. The BigQuery-as-pre-processing-layer pattern is the highest-value cost management insight and should be standard in all Data Cloud scoping conversations.
