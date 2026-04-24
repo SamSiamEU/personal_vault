@@ -22,8 +22,9 @@
 **Date:** 2026-04-24
 **Insight:** Kaushik's 10/90 rule: $10 goes to tools, $90 goes to analysts and big brains. The market has over-invested in tools (GA4, attribution platforms, CAPI, dashboards) and structurally under-invested in intelligence. SMBs can't hire the $90 analyst. That is the gap. If Acqura is a software platform, it competes in the $10 bucket alongside Ruler Analytics, Northbeam, Triple Whale — a crowded, VC-backed market that Dennis cannot win on distribution. If Acqura is "the $90 analyst your clients can't afford to hire" — a fractional growth intelligence service, tool-enabled but analyst-brained — it's in a nearly uncontested category. The OVERVIEW.md hasn't resolved this. That's a foundational positioning decision that affects everything downstream: pricing model, sales motion, product roadmap, hiring.
 **Connection to Acqura:** GTI as a framework is analyst-brained by design. But if it's packaged as software, it will be priced and perceived as a tool. The question is not what GTI does — it's what Acqura sells. A dashboard is $200/month. An analyst is $5,000/month. Which one is Acqura?
-**Status:** New
+**Status:** Resolved
 **Priority:** High
+**Resolution (2026-04-21):** Tier Architecture decision resolves this. Tier 1 (€800–1,500/month) explicitly serves the $10 conversation — short sales cycle, no platform migration, CFO/CMO entry point. Tier 3 (€4,000–8,000/month) is the $90 analyst-in-a-box. Acqura now has a product for both buckets with a natural graduation path between them.
 
 ---
 
@@ -32,8 +33,9 @@
 **Date:** 2026-04-24
 **Insight:** The "tracking health audit → CAPI fix → GTI intelligence" funnel is Acqura's stated entry point. The problem: Shopify native CAPI integration is free and takes two hours. WooCommerce has a free plugin. Meta is actively lowering the setup barrier for every major platform. By 2027–2028, CAPI will be auto-configured at the platform level for 80% of e-commerce clients. When that happens, the billable setup phase disappears and the "fix your tracking first" narrative has no hook. Acqura's entry point is being commoditised by the platforms it depends on. If the tracking audit is where Acqura creates its first value and establishes trust, and that service costs nothing elsewhere, the entry strategy has a shelf life that may be shorter than Acqura's product development timeline.
 **Connection to Acqura:** Acqura needs a more durable entry point — something that can't be given away for free by Shopify or Meta. Candidates: (1) the cross-channel attribution gap (GA4 + Meta + Google together — no platform solves this for free), (2) the RTO-adjusted economics audit for Indian D2C (no platform does this at all), (3) a structured first-party data assessment that scores readiness for GTI, not just CAPI coverage.
-**Status:** New
+**Status:** Monitoring
 **Priority:** High
+**Note (2026-04-21):** Tier 1 reduces dependency on CAPI as the primary entry point. Intelligence layer works across any stack. However, CAPI setup remains part of Tier 1 delivery — monitor Shopify/WooCommerce native CAPI development and adjust pricing accordingly if setup fees erode.
 
 ---
 
@@ -42,8 +44,9 @@
 **Date:** 2026-04-24
 **Insight:** The Acqura wiki has 6 deep sources on Meta CAPI and tracking, 2 on attribution frameworks, and zero — literally zero — on Google Ads signal quality, GCLID capture, Google's conversion API, TikTok pixel infrastructure, or programmatic measurement. The current cross-channel intelligence narrative is built on one-channel depth. GCLID is Google's equivalent of fbclid. Google's Enhanced Conversions is Google's equivalent of CAPI. They have materially different mechanics, EMQ equivalents, and failure modes. If GTI is delivering cross-channel budget recommendations and the analyst behind it doesn't understand how Google's signal pipeline works at the same depth as Meta's, the recommendations are asymmetrically informed. Clients will expose this the first time they ask a technical question about their Google data.
 **Connection to Acqura:** The intel wiki should have equivalent depth on Google Ads, TikTok, and programmatic before Acqura goes to market claiming cross-channel intelligence. This is a research gap with a product credibility consequence. Not calling this out to embarrass — calling it out because a competitor who knows this will use it against Acqura in a pitch.
-**Status:** New
+**Status:** Partially Resolved
 **Priority:** High
+**Resolution (2026-04-21):** Tier 1 works on ANY stack (Braze, MoEngage, WebEngage) — no cross-channel claim needed at entry. Intelligence layer proves value first, activation follows. Full cross-channel claim deferred to Tier 2/3 where SFMC is in place.
 
 ---
 
@@ -52,8 +55,9 @@
 **Date:** 2026-04-24
 **Insight:** Kaushik's three-phase maturity model: Phase 1 (Data Capture, 0–6 months), Phase 2 (Data Reporting, 6–12 months), Phase 3 (Data Analysis/IABI, 12+ months). SMB clients arrive predominantly in Phase 1 or early Phase 2. GTI's output — IABI-structured recommendations (Insight → Action → Business Impact) — is a Phase 3 expectation. Phase 1 and 2 clients don't understand it, won't trust it, and won't act on it, because they've never received anything other than reports and dashboards. Selling Phase 3 output to Phase 2 clients is not an education problem — it's a product design problem. GTI as currently conceived may be too sophisticated for the clients it's targeting, or Acqura is targeting the wrong clients.
 **Connection to Acqura:** Two options: (1) Build a maturity assessment into onboarding and deliver graduated output by phase — Phase 1 clients get a tracking report and a fix list; Phase 2 gets insights with recommended actions; Phase 3 gets full IABI. Or (2) Explicitly target Phase 3 clients (sophisticated in-house marketers, performance agencies) and stop trying to serve Phase 1 SMBs. Trying to serve all three phases with one product is how you build a product that serves none of them well.
-**Status:** New
+**Status:** Resolved
 **Priority:** High
+**Resolution (2026-04-21):** Tier 1 is explicitly designed for Phase 1-2 clients. The OSP graduation path moves them to Phase 3 naturally. No longer a gap — this is now a feature of the tier model.
 
 ---
 
@@ -62,8 +66,9 @@
 **Date:** 2026-04-24
 **Insight:** For Indian D2C clients, the ROAS number in every ad platform (Meta Ads Manager, Google, etc.) is systematically overstated by 20–40% because COD orders that are never delivered are counted as conversions. A campaign showing 3.5x ROAS may actually be delivering 2.1x after RTO. Every Indian D2C brand is making budget scaling decisions against a number that is fundamentally wrong. No competitor — not Ruler, not Northbeam, not Triple Whale — surfaces RTO-adjusted ROAS as a native metric. They all read the ad platform conversion data and report it as truth. Acqura, if it integrates with the client's order management system or logistics data, can be the first platform to report actual revenue economics rather than reported conversions.
 **Connection to Acqura:** This is a concrete, immediate product feature with zero competitor overlap for the Indian D2C market. "RTO-Adjusted ROAS by Campaign and Audience Segment" would be the single most valuable metric any Indian D2C brand has never seen. It also surfaces which campaigns are generating high-COD audiences (likely impulse buyers) vs. prepaid-intent audiences (more committed buyers) — a segmentation insight that directly informs GTI budget recommendations.
-**Status:** New
+**Status:** Prioritised
 **Priority:** High
+**Resolution (2026-04-21):** This is now a Tier 1 killer feature for Indian D2C. Every brand on MoEngage needs this metric. No competitor offers it. Should be featured prominently in Tier 1 positioning and Eksido pitch deck.
 
 ---
 
@@ -72,8 +77,9 @@
 **Date:** 2026-04-24
 **Insight:** 97% of all marketing spend — including all the spend Acqura's clients are making — is concentrated on "Do" intent audiences (strong purchase intent, close to conversion). These audiences are the most competitive, most expensive, and most picked-over in digital advertising. GTI optimising within the Do cluster is making clients better at winning an increasingly expensive auction. The STDC framework makes the alternative clear: See and Think intent audiences (no commercial intent and weak commercial intent respectively) are dramatically larger pools, with lower CPMs and far less competition. A client who shifts 20% of budget from Do to Think may find dramatically better returns than a client who squeezes another 5% of efficiency out of their existing Do campaigns. If GTI is primarily a "how do I spend my Do budget better" product, it's solving the wrong problem for most clients.
 **Connection to Acqura:** GTI's first output for any new client should be an intent gap analysis: what % of their current spend is in each STDC cluster, what the CPM differential looks like between clusters, and what audience size is being left unreached in See/Think. This reframes Acqura from "optimise your campaigns" to "find your next growth lever" — a much more valuable and differentiated positioning.
-**Status:** New
+**Status:** Exploring
 **Priority:** Medium
+**Note (2026-04-21):** Tier 1 explicitly addresses See/Think/Do/Care intent gap diagnosis. This should be built into the standard Tier 1 delivery output — every client gets an intent gap report as part of their Growth Pulse dashboard.
 
 ---
 
@@ -102,8 +108,9 @@
 **Date:** 2026-04-24
 **Insight:** Ruler Analytics sells through performance marketers and agencies. Triple Whale and Northbeam sell direct-to-brand (e-commerce). The GTM motion for these two paths is radically different: agencies have multi-account needs, white-label requirements, and buy on behalf of clients (different decision-maker, different ROI metric); direct-to-brand sells to in-house marketing managers (different pricing tolerance, different onboarding need). Acqura's OVERVIEW.md is a template — there is no documented decision on who the primary customer is. Without this decision, GTI feature prioritisation is a guessing game. An agency needs a portfolio-level view. A brand needs a single-account depth view. Building for both simultaneously is how you ship a product that does neither well.
 **Connection to Acqura:** This is not a strategic idea so much as a prerequisite decision. The agency vs. direct-to-brand GTM choice should be the first thing documented in OVERVIEW.md. Everything else — product prioritisation, pricing, sales motion, onboarding design, channel partnerships — flows from it. It's the most important gap in the current Acqura documentation.
-**Status:** New
+**Status:** Resolved
 **Priority:** Medium
+**Resolution (2026-04-21):** GTM is now documented in `gtm-tier-architecture.md`. Tier 1 → direct to brand, short sales cycle. Tier 2 → warm referral, founder to founder. Tier 3 → Eksido OSP graduation path.
 
 ---
 
