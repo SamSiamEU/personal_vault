@@ -5,6 +5,43 @@
 
 ---
 
+## [2026-04-25] ingest | Batch Ingest — 6 new raw files (Campaign Naming Conventions cluster)
+
+**Source type**: External references (vendor blog articles — Trackingplan, AdManage.ai, Improvado, Supermetrics, PPCHero/Brainlabs, AdAmigo.ai)
+**Files processed**: 6 of 7 new raw files; 1 skipped (Monetate — personalisation CMS tool, campaign naming for on-site experiments, out of scope for paid media intelligence)
+
+**Dominant theme**: Campaign naming conventions as data taxonomy — the structural framework underlying Acqura's Tier 1 TIP taxonomy and Campaign ID governance deliverable
+
+**Files processed**:
+- `A Practical Guide to Campaign Naming Conventions.md` — Trackingplan; master dictionary, URL builder, governance automation
+- `Ad Creative Naming Conventions Guide (2026).md` — AdManage.ai; 4-layer model, stable creative ID, decision vs. context fields
+- `Campaign Naming Conventions A Complete Guide to Best Practices 2026.md` — Improvado; 3-level hierarchy, Salesforce Campaign naming, AI governance
+- `Campaign Naming Conventions The Key to Cleaner and Reliable Reporting.md` — Supermetrics; positional vs. key-value trade-off, BI transformation
+- `The Complete Guide To PPC Naming Conventions.md` — PPCHero/Brainlabs; parameters/fields/anchors/separators vocabulary, agency structure
+- `Ultimate Guide to Meta Ad Naming Conventions 2025.md` — AdAmigo.ai; Meta templates, version control, AI automation
+
+**Source pages created (6)**:
+- [[naming-conventions-trackingplan-2026]]
+- [[naming-conventions-admanage-creative-2026]]
+- [[naming-conventions-improvado-2026]]
+- [[naming-conventions-supermetrics]]
+- [[naming-conventions-ppchero-brainlabs]]
+- [[naming-conventions-adamigo-meta-2025]]
+
+**Concept pages created (1)**:
+- [[campaign-naming-conventions]] — 4-layer hierarchy; stable creative ID as join key; positional vs. key-value schema; governance layer; Acqura TIP taxonomy implications; commoditisation risk
+
+**Entity pages created (2)**:
+- [[improvado]] — AI-powered marketing data governance; 500+ connectors; direct Tier 1 competitor for campaign naming automation
+- [[supermetrics]] — data connector + transformation platform; relevant as existing infrastructure in Tier 1 client environments
+
+**Concept pages updated (1)**:
+- [[utm-tracking]] — added campaign naming alignment section; utm_content as creative ID carrier; key-value pair for UTMs; privacy note on URL-visible parameters; sources count 1→4
+
+**Overview.md**: new landscape cluster added (campaign taxonomy & data governance); two new Acqura implications (governance commoditisation; creative ID as GTI join key for RTO-adjusted ROAS; Supermetrics+BigQuery as DIY Tier 1 stack); source count updated to 20
+
+**Synthesis note**: The campaign naming cluster confirms the market pain (80% of analyst time on data cleaning without naming conventions) and validates Acqura's Tier 1 TIP taxonomy as a genuine service gap. The critical finding: AI-powered governance (Improvado, Trackingplan) is automating the naming compliance layer, compressing the consulting value of "setting up a naming convention." Acqura's defensible Tier 1 value is (1) taxonomy design judgment, (2) creative ID integration for RTO-adjusted ROAS, and (3) the GTI intelligence built on the clean data — not governance setup alone. Vendors filing these sources are all potential competitors for parts of Acqura's stack.
+
 ## [2026-04-22] ingest | Batch Ingest — 9 new raw files (Meta CAPI cluster + D2C RTO)
 
 **Source type**: External references (practitioner guides, Meta official docs, D2C operations article)

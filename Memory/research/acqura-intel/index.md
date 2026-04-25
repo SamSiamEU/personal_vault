@@ -2,7 +2,7 @@
 
 > Content catalog for the acqura-intel wiki. Updated on every ingest.
 > To find relevant pages for a query, start here.
-> Last updated: 2026-04-24
+> Last updated: 2026-04-25
 
 ---
 
@@ -24,6 +24,12 @@
 | [[kaushik-see-think-do-care]] | STDC framework: 4 audience intent clusters (See/Think/Do/Care), LAQA concept, Content+Marketing+Measurement trifecta, per-cluster metrics | 2026-04-24 |
 | [[kaushik-digital-analytics-ecosystem]] | Analytics maturity model: 5 core elements, 10/90 rule, 3 output stages (data pukes→IABI), 3 execution phases with timelines | 2026-04-24 |
 | [[pharynx-d2c-cod-ai-challenges]] | COD in India D2C: inflated dashboard problem, reconciliation complexity, AI voice agents for COD management, COD-to-prepaid conversion strategy | 2026-04-24 |
+| [[naming-conventions-trackingplan-2026]] | Trackingplan: campaign naming as data governance; master dictionary; URL builder; real-time UTM validation; key-value pair architecture | 2026-04-25 |
+| [[naming-conventions-admanage-creative-2026]] | AdManage.ai: 4-layer naming model; stable creative ID as join key; decision vs. context fields; positional vs. key-value recommendation | 2026-04-25 |
+| [[naming-conventions-improvado-2026]] | Improvado: hierarchical 3-level framework; Salesforce Campaign naming example; AI-powered naming governance (500+ sources) | 2026-04-25 |
+| [[naming-conventions-supermetrics]] | Supermetrics: positional vs. key-value trade-off analysis; data transformation layer (SQL, split-text) for BI reporting | 2026-04-25 |
+| [[naming-conventions-ppchero-brainlabs]] | PPCHero/Brainlabs: parameters/fields/separators/anchors vocabulary; granularity trade-off; agency naming hierarchy; failure modes | 2026-04-25 |
+| [[naming-conventions-adamigo-meta-2025]] | AdAmigo.ai: Meta-specific 3-level templates; deterministic version control; separator comparison; AI bulk naming automation | 2026-04-25 |
 
 ---
 
@@ -34,6 +40,8 @@
 | [[owox]] | Analytics/cost-import tool; automates non-Google ad cost data into GA4 and BigQuery | 2026-04-20 |
 | [[ruler-analytics]] | First-party MTA + MMM platform; direct competitor analogue to Acqura | 2026-04-20 |
 | [[meta-platform]] | Meta (Facebook/Instagram) advertising ecosystem: Pixel, CAPI, EMQ, Ad Library, Advantage+; tracking architecture | 2026-04-22 |
+| [[improvado]] | Marketing analytics + AI data governance platform; 500+ connectors; auto-validates campaign names; potential Tier 1 competitor | 2026-04-25 |
+| [[supermetrics]] | Data connector + transformation platform; moves ad data to BigQuery/Sheets/BI tools; relevant for clients with existing data stacks | 2026-04-25 |
 
 ---
 
@@ -53,6 +61,7 @@
 | [[see-think-do-care]] | STDC audience intent framework: See/Think/Do/Care clusters, LAQA, 97%-Do-bias, per-cluster metrics, trifecta requirement | 2026-04-24 |
 | [[analytics-maturity-model]] | Kaushik 3-phase maturity model: Data Capture→Reporting→Analysis; IABI output frame; 10/90 rule; client diagnostic tool | 2026-04-24 |
 | [[d2c-rto]] | Return to Origin in Indian D2C; COD dependency; inflated dashboard problem; AI voice agents; COD-to-prepaid strategy | 2026-04-24 |
+| [[campaign-naming-conventions]] | Data taxonomy framework: 4-layer hierarchy, stable creative ID as join key, positional vs. key-value schema, governance automation; direct input to Acqura's TIP taxonomy | 2026-04-25 |
 
 ---
 

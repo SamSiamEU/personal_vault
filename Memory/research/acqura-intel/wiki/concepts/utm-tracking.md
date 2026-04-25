@@ -3,8 +3,8 @@ name: UTM Tracking
 type: concept
 category: tactic
 tags: [utm, tracking, attribution, ga4, campaign-tagging]
-sources: 1
-last_updated: 2026-04-20
+sources: 4
+last_updated: 2026-04-25
 ---
 
 # UTM Tracking
@@ -46,6 +46,17 @@ From Ruler Analytics:
 - **Campaign Name: match exactly** to the Facebook Ad campaign name for clean cross-referencing
 - **Consistent naming conventions across all campaigns** — generic labels like `paid_social` lose granularity
 
+## Campaign Naming and UTM Alignment
+
+UTM parameters are only as useful as the campaign naming convention they encode. Key connections from the [[campaign-naming-conventions]] cluster:
+
+- **`utm_campaign`** should mirror the campaign name string (or ad group name, depending on analytics granularity)
+- **`utm_content`** should carry the **stable creative ID** — the join key that links ad manager → GA4 → backend conversion data. Without a creative ID here, creative-level attribution is impossible.
+- **`utm_id`** is required for GA4 non-Google cost data import (see existing notes below). Also useful as a stable join key for data warehouse work (BigQuery).
+- **Key-value pair format** is preferred for UTM values over positional format — parsing correctness matters more than human readability in URL query strings.
+- **Privacy note:** UTM parameters are visible in browser URLs after ad click. Avoid encoding audience names, budget tiers, or sensitive internal codes in raw form — use coded identifiers instead (e.g., `aud:lal01` not `aud:high-value-purchasers-last-30-days`).
+- **Schema choice:** Pick one separator character (`:` or `*` or `_`) for key-value pairs in UTMs and document it. Supermetrics, Improvado, and Trackingplan all parse UTM parameters — inconsistent separators break automated extraction.
+
 ## Acqura's Angle
 
 UTM tracking is table stakes — but its failure modes (missing tags, inconsistent naming, silent match failures, case inconsistency) are a recurring source of broken reporting. Acqura's GTI framework should account for UTM convention standardisation as a baseline data quality layer. Clients with messy UTM hygiene will have upstream data problems that corrupt any intelligence built on top. UTM is also the floor — not the ceiling. [[marketing-measurement-triangulation]] maps what sits above it.
@@ -59,3 +70,7 @@ UTM tracking is table stakes — but its failure modes (missing tags, inconsiste
 
 - [[owox-utm-id-ad-tracking]] — introduced utm_id requirement in GA4; explained the cost import dependency
 - [[ruler-facebook-ads-ga4-2026]] — Facebook-specific UTM best practices; UTM as baseline layer only
+- [[naming-conventions-admanage-creative-2026]] — utm_content as creative ID carrier; utm_id as data warehouse join key; UTM mapping for paid social
+- [[naming-conventions-supermetrics]] — UTM granularity decision (campaign vs. ad group level); key-value pair parsing for BI tools
+- [[naming-conventions-trackingplan-2026]] — master dictionary for UTM values; URL builder for compliance; key-value pair architecture
+- [[naming-conventions-improvado-2026]] — privacy note on UTM visibility in browser URLs
