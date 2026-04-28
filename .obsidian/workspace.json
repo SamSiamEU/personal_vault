@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Memory/research/acqura-intel/raw/Ad Creative Naming Conventions Guide (2026).md",
+                "file": "Memory/research/acqura-intel/raw/Why standardization matters in marketing data.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ad Creative Naming Conventions Guide (2026)"
+              "title": "Why standardization matters in marketing data"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Memory/research/acqura-intel/raw/Ad Creative Naming Conventions Guide (2026).md",
+                "file": "Memory/research/acqura-intel/raw/Why standardization matters in marketing data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Ad Creative Naming Conventions Guide (2026)"
+              "title": "Backlinks for Why standardization matters in marketing data"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Memory/research/acqura-intel/raw/Ad Creative Naming Conventions Guide (2026).md",
+                "file": "Memory/research/acqura-intel/raw/Why standardization matters in marketing data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Ad Creative Naming Conventions Guide (2026)"
+              "title": "Outgoing links from Why standardization matters in marketing data"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Memory/research/acqura-intel/raw/Ad Creative Naming Conventions Guide (2026).md",
+                "file": "Memory/research/acqura-intel/raw/Why standardization matters in marketing data.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Ad Creative Naming Conventions Guide (2026)"
+              "title": "Outline of Why standardization matters in marketing data"
             }
           }
         ]
@@ -186,6 +186,10 @@
   },
   "active": "3e9b301782f14329",
   "lastOpenFiles": [
+    "Memory/research/acqura-intel/raw/Accutics Trackcheck Evaluate and strengthen campaign tracking.md",
+    "Memory/research/acqura-intel/raw/Why standardization matters in marketing data.md",
+    "Memory/research/acqura-intel/raw/Faster Campaign Execution for Media & Agencies.md",
+    "Memory/research/acqura-intel/raw/Ad Creative Naming Conventions Guide (2026).md",
     "Memory/research/acqura-intel/wiki/entities/supermetrics.md",
     "Memory/research/acqura-intel/wiki/entities/improvado.md",
     "Memory/research/acqura-intel/wiki/concepts/campaign-naming-conventions.md",
@@ -196,7 +200,6 @@
     "Memory/research/acqura-intel/wiki/sources/naming-conventions-admanage-creative-2026.md",
     "Memory/research/acqura-intel/wiki/sources/naming-conventions-trackingplan-2026.md",
     "Memory/research/acqura-intel/raw/Ultimate Guide to Meta Ad Naming Conventions 2025.md",
-    "Memory/research/acqura-intel/raw/Ad Creative Naming Conventions Guide (2026).md",
     "Memory/research/acqura-intel/raw/Campaign Naming Convention Best Practices.md",
     "Memory/research/acqura-intel/raw/The Complete Guide To PPC Naming Conventions.md",
     "Memory/research/acqura-intel/raw/Campaign Naming Conventions A Complete Guide to Best Practices 2026.md",
@@ -209,9 +212,6 @@
     "Memory/research/acqura-intel/wiki/concepts/see-think-do-care.md",
     "Memory/research/acqura-intel/wiki/sources/pharynx-d2c-cod-ai-challenges.md",
     "Memory/research/acqura-intel/wiki/sources/kaushik-digital-analytics-ecosystem.md",
-    "Memory/research/acqura-intel/wiki/sources/kaushik-see-think-do-care.md",
-    "Memory/research/acqura-intel/raw/The Complete Digital Analytics Ecosystem How To Win Big.md",
-    "Memory/research/salesforce-architect/wiki/solutions/neom-cdp-rfp-2025.md",
     "Memory/research/salesforce-architect/raw/Monday_vs_Salesforce_Comparison.xlsx",
     "Memory/research/salesforce-architect/raw/ETAK RFP Requirement Mapping.docx",
     "Memory/research/salesforce-architect/raw/ETAK User story epics.docx",
